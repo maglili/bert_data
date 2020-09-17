@@ -12,7 +12,7 @@ ctx = ssl.create_default_context()
 ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
 
-w = csv.writer(open("output.csv", "w", newline='', encoding='utf-8'))
+w = csv.writer(open("a_output.csv", "w", newline='', encoding='utf-8'))
 count = 0
 
 for i in id_list:
@@ -26,6 +26,15 @@ for i in id_list:
     title = tags.text
     title = title.strip()
 
+    tags = soup.find('span', class_='identifier doi')
+    if tags is not None:
+        doi = tags.text
+        doi = doi.strip()
+        doi = doi.split()
+        doi = doi[1]
+    else:
+        doi = '***No DOI in page!***'
+
 
     tags = soup.find(id='enc-abstract')
     if tags is not None:
@@ -36,7 +45,7 @@ for i in id_list:
         abst = tags.text
         abst = abst.strip()
 
-    csv_row = [title, abst]
+    csv_row = [title, i, doi, abst]
     w.writerow(csv_row)
 
     count += 1

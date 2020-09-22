@@ -6,7 +6,7 @@ import csv
 import time
 
 id_list = find_list()
-i = id_list[13]
+i = id_list[900]
 print('---------------------------------')
 
 # Ignore SSL certificate errors

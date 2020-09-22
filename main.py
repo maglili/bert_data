@@ -3,7 +3,6 @@ from bs4 import BeautifulSoup
 import ssl
 from id_list import find_list
 import csv
-import time
 
 id_list = find_list()
 

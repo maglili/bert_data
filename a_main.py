@@ -1,11 +1,10 @@
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import ssl
-from id_list import find_list
+from id_list import find_list  #import my own function
 import csv
-import time
 
-id_list = find_list()
+id_list = find_list() # all PMID
 
 # Ignore SSL certificate errors
 ctx = ssl.create_default_context()

@@ -4,9 +4,11 @@ import ssl
 from id_list import find_list
 import csv
 import time
+import re
 
 id_list = find_list()
-i = id_list[900]
+i = id_list[300]
+print('PMID:',i)
 print('---------------------------------')
 
 # Ignore SSL certificate errors
@@ -16,7 +18,8 @@ ctx.verify_mode = ssl.CERT_NONE
 
 service_url = 'https://pubmed.ncbi.nlm.nih.gov/'
 url = service_url + i
-print(url)
+print('url:',url)
+print('---------------------------------')
 html = urlopen(url, context=ctx).read()
 soup = BeautifulSoup(html, "html.parser")
 
@@ -24,7 +27,7 @@ soup = BeautifulSoup(html, "html.parser")
 tags = soup.find('h1', class_='heading-title')
 title = tags.text
 title = title.strip()
-print(title)
+print('title:',title)
 print('---------------------------------')
 
 tags = soup.find('span', class_='identifier doi')
@@ -34,8 +37,8 @@ if tags is not None:
     doi = doi.split()
     doi = doi[1]
 else:
-    doi = 'No DOI in page!'
-print(doi)
+    doi = ''
+print('doi:',doi)
 print('---------------------------------')
 
 
@@ -43,9 +46,32 @@ tags = soup.find(id='enc-abstract')
 if tags is not None:
     abst = tags.text
     abst = abst.strip()
-    print(abst)
 else:
     tags = soup.find('i', class_='empty-abstract')
     abst = tags.text
     abst = abst.strip()
-    print(abst)
+print('abst:',abst)
+print('---------------------------------')
+
+tags = soup.find('span', class_='cit')
+if tags is not None:
+    year = tags.text
+    #year = year.strip()
+    #year = year.split()
+    #year = year[0]
+    year = re.findall('[0-9]+',year)
+    year = year[0]
+    year=''.join(year)
+    year = year.strip()
+else:
+    year = ''
+print('year:',year)
+print('---------------------------------')
+
+tags = soup.find_all('a', class_='full-name')
+authors = []
+for tag in tags:
+    name = tag.text
+    authors.append(name)
+authors = ', '.join(authors)
+print('authors:',authors)

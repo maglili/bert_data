@@ -1,19 +1,81 @@
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
+from urllib.request import urlopen
 from bs4 import BeautifulSoup
+import ssl
+import csv
 import time
+import re
+import pandas as pd
 
+df = pd.read_csv('ID_set.csv',squeeze=True,header=None)  #預設使用者輸入檔案叫input.xlsx
+id_list = df.tolist()
 
-options = Options()
-options.add_argument("--disable-notifications")
+# Ignore SSL certificate errors
+ctx = ssl.create_default_context()
+ctx.check_hostname = False
+ctx.verify_mode = ssl.CERT_NONE
 
-brower = webdriver.Chrome('./chromedriver', chrome_options=options)
-brower.get("https://pubmed.ncbi.nlm.nih.gov/?term=(((Drosophila%20melanogaster%5BTitle%2FAbstract%5D)%20OR%20(Drosophila%5BTitle%2FAbstract%5D))%20OR%20(D.%20melanogaster%5BTitle%2FAbstract%5D)&filter=years.1906-1917&page=1")
-time.sleep(3)
+w = csv.writer(open("output2.csv", "w", newline='', encoding='utf-8'))
+count = 0
+year_set=dict()
 
-brower.find_element_by_css_selector('button.load-button.next-page').click()
+for i in id_list:
+    service_url = 'https://pubmed.ncbi.nlm.nih.gov/'
+    url = service_url + str(i)
+    html = urlopen(url, context=ctx).read()
+    soup = BeautifulSoup(html, "html.parser")
+    time.sleep(1)
+    # Retrieve all of the anchor tags
+    tags = soup.find('h1',class_='heading-title')
+    title = tags.text
+    title = title.strip()
+    #--------------------------------------------------
+    tags = soup.find('span', class_='identifier doi')
+    if tags is not None:
+        doi = tags.text
+        doi = doi.strip()
+        doi = doi.split()
+        doi = doi[1]
+    else:
+        doi = ''
+    #--------------------------------------------------
+    tags = soup.find(id='enc-abstract')
+    if tags is not None:
+        abst = tags.text
+        abst = abst.strip()
+    else:
+        tags = soup.find('i', class_='empty-abstract')
+        abst = tags.text
+        abst = abst.strip()
+    #--------------------------------------------------
+    tags = soup.find('span', class_='cit')
+    if tags is not None:
+        year = tags.text
+        #year = year.strip()
+        #year = year.split()
+        #year = year[0]
+        year = re.findall('[0-9]+',year)
+        year = year[0]
+        year=''.join(year)
+        year = year.strip()
+    else:
+        year = ''
+    year_set[year]=year_set.get(year,0)+1
+    #--------------------------------------------------
+    tags = soup.find_all('a', class_='full-name')
+    if tags is not None:
+        authors = []
+        for tag in tags:
+            name = tag.text
+            authors.append(name)
+        authors = ', '.join(authors)
+    else:
+        authors = ''
+    #--------------------------------------------------
+    csv_row = [title, i, doi, abst, year, authors]
+    w.writerow(csv_row)
 
-soup = BeautifulSoup(brower.page_source, 'html.parser')
-tags = soup.find_all('a', class_='docsum-title')
-for tag in tags:
-    print(tag.get('href'))
+    count += 1
+    print('Processing',count)
+    print('year:',year)
+
+print(year_set)

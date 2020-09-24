@@ -1,13 +1,18 @@
+
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import ssl
-from id_list import find_list
+#from id_list import find_list
 import csv
 import time
 import re
+import pandas as pd
 
-id_list = find_list()
-i = id_list[300]
+df = pd.read_csv('ID_set.csv',squeeze=True,header=None)  #預設使用者輸入檔案叫input.xlsx
+id_list = df.tolist()
+
+
+i = id_list[1038]
 print('PMID:',i)
 print('---------------------------------')
 
@@ -17,7 +22,7 @@ ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
 
 service_url = 'https://pubmed.ncbi.nlm.nih.gov/'
-url = service_url + i
+url = service_url + str(i)
 print('url:',url)
 print('---------------------------------')
 html = urlopen(url, context=ctx).read()
@@ -75,3 +80,31 @@ for tag in tags:
     authors.append(name)
 authors = ', '.join(authors)
 print('authors:',authors)
+
+
+'''
+import urllib.request
+from urllib.error import HTTPError
+
+req = urllib.request.Request(url='https://pubmed.ncbi.nlm.nih.gov/21415126/')
+try:
+    handler = urllib.request.urlopen(req)
+    print('1')
+except HTTPError as e:
+    content = e.read()
+    print('2')
+'''
+
+'''
+import requests
+from bs4 import BeautifulSoup
+
+r = requests.get("https://pubmed.ncbi.nlm.nih.gov/21415126/") #將網頁資料GET下來
+soup = BeautifulSoup(r.text,"html.parser") #將網頁資料以html.parser
+tags = soup.find('h1', class_='heading-title')
+print(tags)
+title = tags.text
+title = title.strip()
+print('title:',title)
+#print('---------------------------------')
+'''

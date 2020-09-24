@@ -12,9 +12,8 @@ df = pd.read_csv('ID_set.csv',squeeze=True,header=None)  #預設使用者輸入�
 id_list = df.tolist()
 
 
-i = id_list[1038]
-print('PMID:',i)
-print('---------------------------------')
+i = id_list[4508+2115-1-1+1050-1+2535-1+412-1]
+
 
 # Ignore SSL certificate errors
 ctx = ssl.create_default_context()
@@ -33,6 +32,9 @@ tags = soup.find('h1', class_='heading-title')
 title = tags.text
 title = title.strip()
 print('title:',title)
+print('---------------------------------')
+
+print('PMID:',i)
 print('---------------------------------')
 
 tags = soup.find('span', class_='identifier doi')

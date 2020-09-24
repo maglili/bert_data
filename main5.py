@@ -8,11 +8,11 @@ import pandas as pd
 df = pd.read_csv('ID_set.csv',squeeze=True,header=None)  #預設使用者輸入檔案叫input.xlsx
 id_list = df.tolist()
 
-w = csv.writer(open("output3.csv", "w", newline='', encoding='utf-8'))
+w = csv.writer(open("output5.csv", "w", newline='', encoding='utf-8'))
 count = 0
 year_set=dict()
 
-for i in range(1036,len(id_list)):
+for i in range(4508+2115-1-1,len(id_list)):
     service_url = 'https://pubmed.ncbi.nlm.nih.gov/'
     url = service_url + str(id_list[i])
     r = requests.get(url)
@@ -20,6 +20,13 @@ for i in range(1036,len(id_list)):
     time.sleep(1)
     # Retrieve all of the anchor tags
     tags = soup.find('h1',class_='heading-title')
+    if tags is None:
+        for i in range(10):
+            tags = soup.find('h1',class_='heading-title')
+            print('***retry',i,'***')
+            time.sleep(10)
+            if tags is not None:
+                break
     title = tags.text
     title = title.strip()
     #--------------------------------------------------

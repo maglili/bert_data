@@ -12,7 +12,7 @@ df = pd.read_csv('ID_set.csv',squeeze=True,header=None)  #預設使用者輸入�
 id_list = df.tolist()
 
 
-i = id_list[4508+2115-1-1+1050-1+2535-1+412-1+654-1+14928-1]
+i = id_list[4508+2115-1-1+1050-1+2535-1+412-1+654-1+14928-1+972]
 
 
 # Ignore SSL certificate errors
@@ -53,19 +53,19 @@ tags = soup.find(id='enc-abstract')
 if tags is not None:
     abst = tags.text
     abst = abst.strip()
-else:
+elif soup.find('i', class_='empty-abstract') is not None:
     tags = soup.find('i', class_='empty-abstract')
     abst = tags.text
     abst = abst.strip()
+else:
+    tags = soup.find('div', id='abstract').find('p')
+    abst = tags.text
 print('abst:',abst)
 print('---------------------------------')
 
 tags = soup.find('span', class_='cit')
 if tags is not None:
     year = tags.text
-    #year = year.strip()
-    #year = year.split()
-    #year = year[0]
     year = re.findall('[0-9]+',year)
     year = year[0]
     year=''.join(year)

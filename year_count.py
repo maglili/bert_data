@@ -20,5 +20,8 @@ for i in x:
     y.append(year_set[st])
 #print(y)
 
+for i in range(len(x)):
+    print('Published in',x[i],':',y[i])
+
 plt.bar(x,y)
 plt.show()

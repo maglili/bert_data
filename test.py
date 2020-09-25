@@ -12,7 +12,7 @@ df = pd.read_csv('ID_set.csv',squeeze=True,header=None)  #預設使用者輸入�
 id_list = df.tolist()
 
 
-i = id_list[4508+2115-1-1+1050-1+2535-1+412-1]
+i = id_list[4508+2115-1-1+1050-1+2535-1+412-1+654-1+14928-1]
 
 
 # Ignore SSL certificate errors

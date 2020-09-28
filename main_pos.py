@@ -13,7 +13,7 @@ ctx = ssl.create_default_context()
 ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
 
-w = csv.writer(open("output.csv", "w", newline='', encoding='utf-8'))
+w = csv.writer(open("output_pos.csv", "w", newline='', encoding='utf-8'))
 count = 0
 year_set=dict()
 
@@ -70,12 +70,12 @@ for i in id_list:
     else:
         authors = ''
     #--------------------------------------------------
-    csv_row = [title, i, doi, abst, year, authors]
+    csv_row = [i, title, abst, doi, year, authors]
     w.writerow(csv_row)
 
     count += 1
     print('Processing',count)
     print('year:',year)
-    time.sleep(3)
+    time.sleep(1)
 
 print(year_set)

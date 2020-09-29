@@ -7,6 +7,7 @@ import time
 import re
 
 id_list = find_list() # all PMID
+id_list.sort()
 
 # Ignore SSL certificate errors
 ctx = ssl.create_default_context()

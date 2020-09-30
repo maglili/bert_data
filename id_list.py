@@ -18,5 +18,6 @@ def find_list():
 
     return id_list
 
-id_list = find_list()
-print('Length of id_list:',len(id_list))
+if __name__ == '__main__':
+    id_list = find_list()
+    print('Length of id_list:',len(id_list))

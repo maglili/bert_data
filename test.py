@@ -1,4 +1,7 @@
-
+'''
+This script is for examine specific pmid,
+return output in CMD window.
+'''
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import ssl

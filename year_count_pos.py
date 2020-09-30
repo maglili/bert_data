@@ -24,4 +24,7 @@ if __name__ == '__main__':
         print('Published in',x[i],':',y[i])
 
     plt.bar(x,y)
+    plt.title('Positive data distribution')
+    plt.xlabel('year')
+    plt.ylabel('count')
     plt.show()

@@ -1,24 +1,21 @@
 import pandas as pd
-from year_count_pos import year_set
+from year_count_pos import year_set #this is a variable
 import matplotlib.pyplot as plt
 
 df = pd.read_csv('output_neg_all.csv',squeeze=True,header=None,encoding='iso-8859-1',dtype=str)
-all_set = dict()
-
+all_set = dict() # save all data in output_neg_all.csv
 for i in range(1985,2022):
     all_set[str(i)] = df[df[4]==str(i)]
 
-d  = {}
-frames=[]
-
+d  = {} #save randomly extract data
+frames=[] #list to save extract data
 for i in year_set:
     d["y" + i] = all_set[i].sample(n=year_set[i])
     frames.append(d["y" + i])
-
-result = pd.concat(frames)
-
+result = pd.concat(frames) #combine dataframes in frames
 result.to_csv('random_extract.csv', header = False, index = False, encoding = 'utf-8')
 
+#------------------------------examine year distribution----------------------------------------
 year_count = result[4].tolist()
 year_set_neg = {}
 
@@ -43,4 +40,7 @@ for i in range(len(x)):
     print('Published in',x[i],':',y[i])
 
 plt.bar(x,y)
+plt.title('Randomly extract data distribution')
+plt.xlabel('year')
+plt.ylabel('count')
 plt.show()

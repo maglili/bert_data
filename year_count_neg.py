@@ -20,12 +20,12 @@ for i in df:
     if type(i) == type('str'):
         year_set[i] = year_set.get(i,0)+1
 
-print(year_set)
+#print(year_set)
 
 count = 0
 for key,value in year_set.items():
     count = count + value
-print(count)
+#print(count)
 
 keys = year_set.keys()
 x = []
@@ -33,17 +33,19 @@ for i in keys:
     num = int(i)
     x.append(num)
     x.sort()
-print(x)
+#print(x)
 
 y = []
 for i in x:
     st = str(i)
     y.append(year_set[st])
-print(y)
+#print(y)
 
 for i in range(len(x)):
     print('Published in',x[i],':',y[i])
 
 plt.bar(x,y)
-plt.grid()
+plt.title('Negative data distribution')
+plt.xlabel('year')
+plt.ylabel('count')
 plt.show()

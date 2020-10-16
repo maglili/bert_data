@@ -10,7 +10,7 @@ for i in range(1985,2022):
 d  = {} #save randomly extract data
 frames=[] #list to save extract data
 for i in year_set:
-    d["y" + i] = all_set[i].sample(n=year_set[i])
+    d["y" + i] = all_set[i].sample(n=year_set[i], random_state=1)
     frames.append(d["y" + i])
 result = pd.concat(frames) #combine dataframes in frames
 result.to_csv('random_extract.csv', header = False, index = False, encoding = 'utf-8')

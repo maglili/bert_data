@@ -7,13 +7,20 @@ all_set = dict() # save all data in output_neg_all.csv
 for i in range(1985,2022):
     all_set[str(i)] = df[df[4]==str(i)]
 
+#loading positive data
+pos_df = pd.read_csv('output_pos.csv',squeeze=True,header=None,encoding='iso-8859-1',dtype=str)
+pos_df = pos_df[0]
+pos_pmid = pos_df.tolist()
+
+
 d  = {} #save randomly extract data
 frames=[] #list to save extract data
 for i in year_set:
     d["y" + i] = all_set[i].sample(n=year_set[i], random_state=1)
     frames.append(d["y" + i])
 result = pd.concat(frames) #combine dataframes in frames
-result.to_csv('random_extract.csv', header = False, index = False, encoding = 'utf-8')
+print(result)
+#result.to_csv('random_extract.csv', header = False, index = False, encoding = 'utf-8')
 
 #------------------------------examine year distribution----------------------------------------
 year_count = result[4].tolist()

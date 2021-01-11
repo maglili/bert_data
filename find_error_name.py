@@ -1,3 +1,6 @@
+"""
+print errors
+"""
 import pickle
 
 with open('./alias_data/gene_list.pkl', 'rb') as a:

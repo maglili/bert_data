@@ -1,6 +1,11 @@
 import re
 
 def find_target():
+    """
+    Finding targets from "all_crms.gff3" by regular expression.
+
+    return: target_list
+    """
     fh = open('./positive_data/all_crms.gff3')
     target_list = {}
     for i in fh:

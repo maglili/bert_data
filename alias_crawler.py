@@ -1,3 +1,6 @@
+"""
+crawl target and find its all alias
+"""
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import csv
@@ -27,7 +30,7 @@ aka_list=[]
 error_list=[]
 
 # crawler data
-with open('alias222.csv', 'w', newline='', encoding='utf-8') as csvfile:
+with open('id_and_its_alias.csv', 'w', newline='', encoding='utf-8') as csvfile:
     writer = csv.writer(csvfile)
 
     # for all id, list

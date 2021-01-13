@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import sys
-sys.path.append(r'D:\user\Documents\N26091194\Projects\web_crawler\scripts_pos')
+sys.path.append(r'../scripts_pos')
 from year_count_pos import year_set #this is a variable
 
 #loading pos and neg data
@@ -22,6 +22,7 @@ for year, appear_times in year_set.items():
     for i in range(appear_times):
         while True:
             extract_data = all_set[year].sample(n=1, random_state = random_seed)
+            abst = extract_data[3].item().strip()
             neg_pmid = extract_data[1].to_numpy().item()
             if neg_pmid in pos_pmid:
                 print('Neg_pmid appear in Pos_pmid in year {}!!!'.format(year))
@@ -31,6 +32,12 @@ for year, appear_times in year_set.items():
                 continue
             elif neg_pmid in extract_pmid:
                 print('Dublicate in year {}!!!'.format(year))
+                print(neg_pmid)
+                print('-'*10)
+                random_seed += 1
+                continue
+            elif abst == 'No abstract available':
+                print('No abstract available')
                 print(neg_pmid)
                 print('-'*10)
                 random_seed += 1
@@ -45,7 +52,7 @@ print('='*40)
 result = pd.concat(extract_frames) #combine dataframes in frames
 print(result)
 print('='*40)
-#result.to_csv('../csv_data/random_extract_remove_redundant.csv', header = False, index = False, encoding = 'utf-8')
+result.to_csv('../csv_data/random_extract_remove_redundant.csv', header = False, index = False, encoding = 'utf-8')
 
 #------------------------------examine year distribution----------------------------------------
 year_count = result[4].tolist()

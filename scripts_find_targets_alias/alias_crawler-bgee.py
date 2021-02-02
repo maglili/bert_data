@@ -39,13 +39,13 @@ with open('./pickles/gene_data.pickle', 'rb') as handle:
 error_list=[]
 
 # crawler data
-with open('./csv_data/bgee_gene-part-3.csv', 'w', newline='', encoding='utf-8') as csvfile:
+with open('./csv_data/bgee_gene-part-5.csv', 'w', newline='', encoding='utf-8') as csvfile:
     writer = csv.writer(csvfile)
     count=0
 
     for fbid in gene_data.keys():
         if fbid in aleady_parse:
-            print(fbid,'already existing.')
+            #print(fbid,'already existing.')
             continue
 
         service_url = 'https://bgee.org/?page=gene&gene_id=' #target url
@@ -83,18 +83,18 @@ with open('./csv_data/bgee_gene-part-3.csv', 'w', newline='', encoding='utf-8') 
         #==========Retrieve all of the anchor tags====================
         Name = soup.find('td', attrs={"property":"bs:name"})
         if Name == None:
-            print('error!')
+            print(fbid,'error! name not found!')
             print('='*30)
-            error_list.append(id)
+            error_list.append(fbid)
             continue
         print('\nName:', Name.text)
 
         Synonyms_list=[]
         Synonyms_tags = soup.find_all('span', attrs={"property":"bs:alternateName"})
         if Synonyms_tags == None:
-            print('error!')
+            print(fbid,'error! Synonyms_tags == None')
             print('='*30)
-            error_list.append(id)
+            error_list.append(fbid)
             continue
 
         for i in range(len(Synonyms_tags)):
@@ -105,7 +105,7 @@ with open('./csv_data/bgee_gene-part-3.csv', 'w', newline='', encoding='utf-8') 
 
         # waiting some time
         #wait_time = random.randint(1,2)
-        time.sleep(0.5)
+        time.sleep(0.1)
 
         count += 1
         print('\n[No.{} finished]'.format(count))
@@ -118,3 +118,6 @@ print('len of error_list',len(error_list))
 
 with open('./pickles/bgee/error_list.pkl', 'wb') as c:
     pickle.dump(error_list, c)
+
+# with open('./pickles/bgee/error_list.pkl', 'rb') as f:
+#     error_list = pickle.load(f)

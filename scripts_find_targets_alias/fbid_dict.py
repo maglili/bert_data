@@ -13,7 +13,7 @@ import pickle
 # with open('gene_data.pickle', 'wb') as handle:
 #     pickle.dump(gene_data, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
-with open('gene_data.pickle', 'rb') as handle:
+with open('./pickles/gene_data.pickle', 'rb') as handle:
     gene_data = pickle.load(handle)
 
 print(len(gene_data.keys()))

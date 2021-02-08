@@ -114,7 +114,7 @@ with open('./csv_data/bgee_gene-part-5.csv', 'w', newline='', encoding='utf-8') 
         # write to csv
         writer.writerow([fbid, Name.text, ', '.join(Synonyms_list)])
 
-print('len of error_list',len(error_list))
+print('len of error_list:',len(error_list))
 
 with open('./pickles/bgee/error_list.pkl', 'wb') as c:
     pickle.dump(error_list, c)

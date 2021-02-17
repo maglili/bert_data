@@ -2,7 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import csv
 
-df = pd.read_csv('output_neg_all.csv',squeeze=True,header=None,encoding='iso-8859-1',dtype=str)
+#df = pd.read_csv('songs_neg_data.csv',squeeze=True,header=None,encoding='iso-8859-1',dtype=str)
+df = pd.read_csv('../csv_data/output-pos-remove_no_abst.csv',squeeze=True,header=None,encoding='iso-8859-1',dtype=str)
 df = df[4]
 df = df.tolist()
 
@@ -45,7 +46,7 @@ for i in range(len(x)):
     print('Published in',x[i],':',y[i])
 
 plt.bar(x,y)
-plt.title('Negative data distribution')
+plt.title('Postive data distribution')
 plt.xlabel('year')
 plt.ylabel('count')
 plt.show()

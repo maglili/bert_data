@@ -49,7 +49,7 @@ except:
 
 error_list=[]
 
-with open('./sons_data.csv', 'w', newline='', encoding='utf-8') as csvfile:
+with open('./sons_neg_data.csv', 'w', newline='', encoding='utf-8') as csvfile:
     writer = csv.writer(csvfile)
     count=0
 

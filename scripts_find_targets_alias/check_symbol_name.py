@@ -25,4 +25,4 @@ for i in range(len(flybase_df)):
     gene_symbol_fb = gene_symbol_fb.split('\\')[1]
     if gene_symbol_fb != gene_symbol_bg:
         count += 1
-        print('count',count,'---','fbid:',fbid_fb,'---',gene_symbol_fb,'vs',gene_symbol_bg)
+        print('count',count,'---','fbid:',fbid_fb,'-----',gene_symbol_fb,'v.s',gene_symbol_bg)

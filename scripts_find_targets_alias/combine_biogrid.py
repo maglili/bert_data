@@ -5,6 +5,7 @@ from tqdm import tqdm
 # load reverse_data_dict that contain flybase and bgee information
 with open('reverse_data_dict.pickle', 'rb') as handle:
     reverse_data_dict = pickle.load(handle)
+ori_reverse_data_dict = len(reverse_data_dict)
 
 # load biogrid data
 biogrid_df  = pd.read_csv('./csv_data/biogrid_symbol_and_its_alias.csv', encoding='utf-8')
@@ -45,43 +46,41 @@ with open('alias_list.pickle', 'rb') as handle:
 
 # combine data
 count = 0
-error_alias_list = []
+different_alias_count = 0
 alias_not_found = []
 for idx in range(len(alias_list)):
     aliases = alias_list[idx]
     add_frag = False
+    fbid_list = []
     for alias in aliases:
         if alias in reverse_data_dict:
-            add_frag = True
-            fbid = reverse_data_dict[alias]
-            break
-    if add_frag:
-        for alias in aliases:
-            if (alias in reverse_data_dict) and (reverse_data_dict[alias] != fbid):
-                # print('error! fbid not same!')
-                # print('alias:',alias)
-                # print('aliases:',aliases)
-                # print()
-                # print('present fbid:',fbid)
-                # print('existing fbid:',reverse_data_dict[alias])
-                # print('='*20)
-                error_alias_list.append(alias)
-
-            if alias not in reverse_data_dict:
-                reverse_data_dict[alias] = fbid
-                #print(alias ,reverse_data_dict[alias])
-    else:
+            fbid_list.append(reverse_data_dict[alias])
+    fbid_list = list(set(fbid_list))
+    if len(fbid_list) == 1:
+        add_frag = True
+        fbid = fbid_list[0]
+    elif len(fbid_list) == 0:
         count += 1
         alias_not_found.append(alias)
         #print('{:20} not found! {}'.format(alias,count))
         #print('='*20)
+    else:
+        different_alias_count += 1
+        print('different_alias_count',different_alias_count)
+        print('aliases',aliases)
+        print('fbid_list',fbid_list)
+        print('='*20)
+    if add_frag:
+        for alias in aliases:
+            if alias not in reverse_data_dict:
+                reverse_data_dict[alias] = fbid
+                #print(alias ,reverse_data_dict[alias])
 
-print(len(error_alias_list))
-print(len(reverse_data_dict))
-for alias in error_alias_list:
-    reverse_data_dict.pop(alias, None)
-print(len(reverse_data_dict))
 
+print('alias_not_found:',len(alias_not_found))
+print('original reverse_data_dict:',ori_reverse_data_dict)
+print('new reverse_data_dict:',len(reverse_data_dict))
+print('add alias:',len(reverse_data_dict) - ori_reverse_data_dict)
 reverse_data_dict_biogrid = reverse_data_dict
 
 # save and load reverse_data_dict_biogrid

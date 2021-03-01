@@ -1,9 +1,18 @@
 import pickle
 import pandas as pd
 import csv
+import re
+from tqdm import tqdm
 
 with open('../scripts_find_targets_alias/pickles/reverse_data_dict_biogrid.pickle', 'rb') as handle:
     reverse_data_dict_biogrid = pickle.load(handle)
+
+reverse_data_dict_biogrid_lower = {} # lower case version of reverse_data_dict_biogrid
+
+for key, value in reverse_data_dict_biogrid.items():
+    key = key.lower()
+    if key not in reverse_data_dict_biogrid_lower:
+        reverse_data_dict_biogrid_lower[key] = value
 
 df = pd.read_csv('../csv_data/output_pos.csv', header=None, encoding='utf-8')
 df = df[[0,2]]
@@ -11,8 +20,9 @@ df = df[[0,2]]
 with open('labeling.tsv', 'w', newline='', encoding='utf-8') as csvfile:
     writer = csv.writer(csvfile, delimiter='\t')
 
-    for idx in range(len(df)):
+    for idx in tqdm(range(len(df))):
         pmid, text_1 = df.iloc[idx]
+        text_1 = text_1.lower()
         text_1 = ' '.join(text_1.split())
         #print(text_1)
 
@@ -30,7 +40,11 @@ with open('labeling.tsv', 'w', newline='', encoding='utf-8') as csvfile:
                     if text_1[start_position:end_position] != key:
                         print('Position Error!')
                         quit()
-                    #print('-'*20)
+                    # print('pmid:',pmid)
+                    # print('key:',key)
+                    # print('start_position:',start_position)
+                    # print('end_position:',end_position)
+                    # print('-'*20)
                     save_range.append(range(start_position, end_position))
                     writer.writerow([idx, pmid, key, reverse_data_dict_biogrid[key], start_position, end_position])
             else:
@@ -38,7 +52,8 @@ with open('labeling.tsv', 'w', newline='', encoding='utf-8') as csvfile:
 
         # rule 2: scan the alias that only 1 word.
         # e.g. olfD, sbl, bss
-        text_1_split = text_1.split()
+        text_1_split = re.split('\s|/',text_1)
+        #text_1_split = text_1.split()
         start_position = 0
         end_position = 0
         for word in text_1_split:
@@ -52,10 +67,14 @@ with open('labeling.tsv', 'w', newline='', encoding='utf-8') as csvfile:
                 if text_1[start_position:end_position] != word:
                     print('Position Error!')
                     quit()
-                #print('-'*20)
+                # print('pmid:',pmid)
+                # print('word:',word)
+                # print('start_position:',start_position)
+                # print('end_position:',end_position)
+                # print('-'*20)
                 writer.writerow([idx, pmid, word,reverse_data_dict_biogrid[word], start_position, end_position])
             start_position = end_position + 1
-
+        #print('='*20)
 
         writer.writerow([])
         writer.writerow(['-'*20])

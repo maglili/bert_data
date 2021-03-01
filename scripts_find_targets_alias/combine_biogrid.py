@@ -3,7 +3,7 @@ import pickle
 from tqdm import tqdm
 
 # ---------------load reverse_data_dict that contain flybase and bgee information--------------------
-with open('reverse_data_dict.pickle', 'rb') as handle:
+with open('./pickles/reverse_data_dict.pickle', 'rb') as handle:
     reverse_data_dict = pickle.load(handle)
 ori_reverse_data_dict = len(reverse_data_dict)
 
@@ -17,31 +17,35 @@ for idx in range(len(biogrid_df)):
     symbol, aliases = biogrid_df.iloc[idx]
     aliases = symbol + ', ' +  aliases
     aliases = aliases.split(', ')
-    if '' in aliases:
-        aliases.remove('')
+    while True:
+        if '' in aliases:
+            aliases.remove('')
+            print('***remove ""***')
+        else:
+            break
     alias_list.append(aliases)
 
-# -------------------remove alias that with respect to mutiple gene--------------------------------
-# remove_list = []
-# for i in tqdm(range(len(alias_list))):
-#     for j in range(i+1,len(alias_list)):
-#         list_1 = alias_list[i]
-#         list_2 = alias_list[j]
-#         for alias in list_1:
-#             if alias in list_2:
-#                 remove_list.append(alias)
+# -------------------remove alias that appear in different gene--------------------------------
+remove_list = []
+for i in tqdm(range(len(alias_list))):
+    for j in range(i+1,len(alias_list)):
+        list_1 = alias_list[i]
+        list_2 = alias_list[j]
+        for alias in list_1:
+            if alias in list_2:
+                remove_list.append(alias)
 
 # ------------------remove alias base on remove_list-----------------------------------------------
-# remove_list = list(set(remove_list))
-# for alias in remove_list:
-#     for idx in range(len(alias_list)):
-#         if alias in alias_list[idx]:
-#             alias_list[idx].remove(alias)
+remove_list = list(set(remove_list))
+for alias in remove_list:
+    for idx in range(len(alias_list)):
+        if alias in alias_list[idx]:
+            alias_list[idx].remove(alias)
 
 # -----------------save and load alias_list-----------------------------------------------------------
-# with open('alias_list.pickle', 'wb') as handle:
-#     pickle.dump(alias_list, handle, protocol=pickle.HIGHEST_PROTOCOL)
-with open('alias_list.pickle', 'rb') as handle:
+with open('./pickles/alias_list.pickle', 'wb') as handle:
+    pickle.dump(alias_list, handle, protocol=pickle.HIGHEST_PROTOCOL)
+with open('./pickles/alias_list.pickle', 'rb') as handle:
     alias_list = pickle.load(handle)
 
 # --------------------------------combine data-------------------------------------------------------
@@ -87,7 +91,7 @@ print('add alias:',len(reverse_data_dict) - ori_reverse_data_dict)
 reverse_data_dict_biogrid = reverse_data_dict
 
 # ------------------save and load reverse_data_dict_biogrid--------------------------------------
-# with open('reverse_data_dict_biogrid.pickle', 'wb') as handle:
-#     pickle.dump(reverse_data_dict_biogrid, handle, protocol=pickle.HIGHEST_PROTOCOL)
-# with open('reverse_data_dict_biogrid.pickle', 'rb') as handle:
-#     reverse_data_dict_biogrid = pickle.load(handle)
+with open('./pickles/reverse_data_dict_biogrid.pickle', 'wb') as handle:
+    pickle.dump(reverse_data_dict_biogrid, handle, protocol=pickle.HIGHEST_PROTOCOL)
+with open('./pickles/reverse_data_dict_biogrid.pickle', 'rb') as handle:
+    reverse_data_dict_biogrid = pickle.load(handle)

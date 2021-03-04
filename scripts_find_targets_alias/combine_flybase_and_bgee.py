@@ -28,6 +28,7 @@ for idx in range(len(bgee_df)):
 
 # -------------------remove redundant alias in data_dict---------------------
 for key,value in data_dict.items():
+    value = value.lower()
     value = value.split(', ')
     value = list(set(value))
     if '' in value:
@@ -44,14 +45,14 @@ for key,value in data_dict.items():
             reverse_data_dict[alias] = key
         else:
             muti_count += 1
-            print('Error {}! {} already exist!'.format(muti_count, alias))
-            print()
-            print('Present fbid:',key)
-            print('Present data:',data_dict[key])
-            print()
-            print('Existing alias fbid:',reverse_data_dict[alias])
-            print('Existing alias data:',data_dict[reverse_data_dict[alias]])
-            print('='*20)
+            # print('Error {}! {} already exist!'.format(muti_count, alias))
+            # print()
+            # print('Present fbid:',key)
+            # print('Present data:',data_dict[key])
+            # print()
+            # print('Existing alias fbid:',reverse_data_dict[alias])
+            # print('Existing alias data:',data_dict[reverse_data_dict[alias]])
+            # print('='*20)
             remove_key_list.append(alias)
 
 remove_key_list = list(set(remove_key_list))
@@ -59,10 +60,25 @@ print('redudant alias:',len(remove_key_list))
 for alias in remove_key_list:
     reverse_data_dict.pop(alias, None)
 
-count = 0
-for key, value in reverse_data_dict.items():
-    count +=1
-    # print('{:45}      {:10}    {}'.format(key,value,count))
+print('len of reverse_data_dict:',len(reverse_data_dict))
 
-# with open('reverse_data_dict.pickle', 'wb') as handle:
-#     pickle.dump(reverse_data_dict, handle, protocol=pickle.HIGHEST_PROTOCOL)
+# add fbid, key: fbid, value: fbid
+for key in data_dict.keys():
+    if key not in reverse_data_dict:
+        reverse_data_dict[key] = key
+
+# lower case version of reverse_data_dict
+reverse_data_dict_v2 = {}
+for key, value in reverse_data_dict.items():
+    key = key.lower()
+    if key not in reverse_data_dict_v2:
+        reverse_data_dict_v2[key] = value
+
+print('len of reverse_data_dict(add fbid):',len(reverse_data_dict))
+print('len of reverse_data_dict_v2:',len(reverse_data_dict_v2))
+
+with open('./pickles/reverse_data_dict.pickle', 'wb') as handle:
+    pickle.dump(reverse_data_dict, handle, protocol=pickle.HIGHEST_PROTOCOL)
+
+with open('./pickles/reverse_data_dict_v2.pickle', 'wb') as handle:
+    pickle.dump(reverse_data_dict_v2, handle, protocol=pickle.HIGHEST_PROTOCOL)

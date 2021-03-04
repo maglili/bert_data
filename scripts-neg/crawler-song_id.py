@@ -1,5 +1,5 @@
 import pandas as pd
-songs_pmid = pd.read_csv('./Id.csv', encoding='utf-8', index_col=0, squeeze=True)
+songs_pmid = pd.read_csv('./song_id.csv', encoding='utf-8', index_col=0, squeeze=True)
 songs_pmid = songs_pmid.to_list()
 #print(len(songs_pmid))
 

@@ -46,7 +46,7 @@ for key, value in symbol_and_its_alias.items():
 # with open('biogrid_symbol_ad_its_alias.pickle', 'wb') as handle:
 #     pickle.dump(symbol_and_its_alias, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
-with open('biogrid_symbol_and_its_alias.csv', 'w', newline='') as csvfile:
+with open('./csv_data/biogrid_symbol_and_its_alias.csv', 'w', newline='') as csvfile:
     writer = csv.writer(csvfile)
     writer.writerow(['Symbol', 'Alias'])
 

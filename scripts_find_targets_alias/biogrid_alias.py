@@ -18,7 +18,7 @@ for i in range(len(df)):
 
     if Symbol_A not in symbol_and_its_alias:
         symbol_and_its_alias[Symbol_A] = Synonyms_A
-    elif Synonyms_A not in symbol_and_its_alias[Symbol_A]:
+    elif (Symbol_A in symbol_and_its_alias) and (Synonyms_A not in symbol_and_its_alias[Symbol_A]):
         print('Symbol:',Symbol_A)
         print('symbol_and_its_alias:',symbol_and_its_alias[Symbol_A])
         print('different alias:',Synonyms_A)
@@ -28,7 +28,7 @@ for i in range(len(df)):
 
     if Symbol_B not in symbol_and_its_alias:
         symbol_and_its_alias[Symbol_B] = Synonyms_B
-    elif Synonyms_B not in symbol_and_its_alias[Symbol_B]:
+    elif (Symbol_B in symbol_and_its_alias) and (Synonyms_B not in symbol_and_its_alias[Symbol_B]):
         print('Symbol:',Symbol_B)
         print('symbol_and_its_alias:',symbol_and_its_alias[Symbol_B])
         print('different alias:',Synonyms_B)
@@ -38,18 +38,16 @@ for i in range(len(df)):
 
 for key, value in symbol_and_its_alias.items():
     value = value.split('\t')
+    value = list(set(value))
     if '-' in value:
         print('remove "-"')
         value.remove('-')
     symbol_and_its_alias[key] = value
-
-# with open('biogrid_symbol_ad_its_alias.pickle', 'wb') as handle:
-#     pickle.dump(symbol_and_its_alias, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
 with open('./csv_data/biogrid_symbol_and_its_alias.csv', 'w', newline='') as csvfile:
     writer = csv.writer(csvfile)
     writer.writerow(['Symbol', 'Alias'])
 
     for key, value in symbol_and_its_alias.items():
-        alias_string = ', '.join(value)
+        alias_string = '\t'.join(value)
         writer.writerow([key, alias_string])

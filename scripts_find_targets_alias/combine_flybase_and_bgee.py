@@ -52,6 +52,8 @@ for key,value in data_dict.items():
             # print('Existing alias data:',data_dict[reverse_data_dict[alias]])
             # print('='*20)
             remove_key_list.append(alias)
+with open('./pickles/remove_key_list.pickle', 'wb') as f:
+    pickle.dump(remove_key_list, f)
 
 # --------------------remove alias from inverse dict------------------------------
 remove_key_list = list(set(remove_key_list))

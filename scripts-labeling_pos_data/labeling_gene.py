@@ -18,8 +18,7 @@ df = df[[0,2]]
 with open('labeling.tsv', 'w', newline='', encoding='utf-8') as csvfile:
     writer = csv.writer(csvfile, delimiter='\t')
 
-    count = 0
-
+    count = 0 # counter
     for idx in tqdm(range(len(df))):
         pmid, text_1 = df.iloc[idx]
         text_1 = text_1.lower()
@@ -31,17 +30,17 @@ with open('labeling.tsv', 'w', newline='', encoding='utf-8') as csvfile:
         writer.writerow([text_1])
         writer.writerow(['index', 'article_pmid','entity_text','entity_fbid','start_position','end_position'])
 
-        # rule 1: scan the alias that comtaining white space.
+        # rule 1: scan the alias that comtaining white space =========================================================
         # e.g. T beta h,  Dm Rg3
-        save_range = []
-        save_alias = []
+
+        save_range = [] # save range: (start_position, end_position)
+        save_alias = [] # save alias info: (key, start_position, end_position)
         for key,value in reverse_data_dict_biogrid.items():
             if ' ' in key:
                 if key in text_1:
                     start_position = text_1.find(key)
                     end_position = start_position + len(key)
-
-                    if (not text_1[start_position-1].isalpha()) and (not text_1[end_position].isalpha()):
+                    if (not text_1[start_position-1].isalpha()) and (not text_1[end_position].isalpha()): # Guarantee alias won't be add redundantly
                         if text_1[start_position:end_position] != key:
                             print('Position Error!')
                             quit()
@@ -50,7 +49,8 @@ with open('labeling.tsv', 'w', newline='', encoding='utf-8') as csvfile:
             else:
                 continue
 
-        remove_list = []
+        remove_list = [] # save tuple that need to delete
+        # find redundant alias
         for i in range(len(save_alias)):
             for j in range(i+1,len(save_alias)):
                 key_a, start_position_a, end_position_a = save_alias[i]
@@ -60,16 +60,17 @@ with open('labeling.tsv', 'w', newline='', encoding='utf-8') as csvfile:
                 elif (start_position_b in range(start_position_a, end_position_a)) and (end_position_b in range(start_position_a, end_position_a)):
                     remove_list.append((key_b, start_position_b, end_position_b))
 
+        # remove info from save_alias
         remove_list = list(set(remove_list))
-
         for i in remove_list:
             save_alias.remove(i)
 
+        # write infomation to tsv file
         for tuple_ in save_alias:
             key, start_position, end_position = tuple_
             writer.writerow([count, pmid, key, reverse_data_dict_biogrid[key], start_position, end_position])
 
-        # rule 2: scan the alias that only 1 word.
+        # rule 2: scan the alias that only 1 word ============================================================
         # e.g. olfD, sbl, bss
         text_1_split = re.split('\s|/',text_1)
         start_position = 0

@@ -3,3 +3,4 @@ BIOGRID-ORGANISM-4.2.193/
 htmls/
 *.csv
 *.pickle
+*.pkl

@@ -32,18 +32,24 @@ with open('labeling.tsv', 'w', newline='', encoding='utf-8') as csvfile:
 
         # rule 1: scan the alias that comtaining white space =========================================================
         # e.g. T beta h,  Dm Rg3
-
         save_range = [] # save range: (start_position, end_position)
         save_alias = [] # save alias info: (key, start_position, end_position)
         for key,value in reverse_data_dict_biogrid.items():
+
+            # alias that containing whike space, e.g. T beta h,  Dm Rg3
             if ' ' in key:
                 if key in text_1:
                     start_position = text_1.find(key)
                     end_position = start_position + len(key)
-                    if (not text_1[start_position-1].isalpha()) and (not text_1[end_position].isalpha()): # Guarantee alias won't be add redundantly
+
+                    # Guarantee we won't find wrong alias
+                    # e.g. ... gene belongs ... -> find: gene b
+                    if (not text_1[start_position-1].isalpha()) and (not text_1[end_position].isalpha()):
+                        # safety trigger
                         if text_1[start_position:end_position] != key:
                             print('Position Error!')
                             quit()
+
                         save_range.append(range(start_position, end_position))
                         save_alias.append((key, start_position, end_position))
             else:
@@ -72,22 +78,36 @@ with open('labeling.tsv', 'w', newline='', encoding='utf-8') as csvfile:
 
         # rule 2: scan the alias that only 1 word ============================================================
         # e.g. olfD, sbl, bss
-        text_1_split = re.split('\s|/',text_1)
+        text_1_split = re.split('\s|/|,',text_1)
         start_position = 0
         end_position = 0
         for word in text_1_split:
+            add_2 = False # frag that indicate start_position = end_position + 2
             skip_frag = False
             end_position = start_position + len(word)
             for range_ in save_range:
                 if start_position in range_: # Guarantee alias won't be add redundantly
                     skip_frag = True
                     continue
+            if len(word) > 1:
+                if (not word[0].isalpha()) and (not word[0].isnumeric()):
+                    word = word[1:]
+                    start_position += 1
+                if (not word[-1].isalpha()) and (not word[-1].isnumeric()):
+                    word = word[:-1]
+                    end_position -= 1
+                    add_2 = True
+
             if word in reverse_data_dict_biogrid and skip_frag == False:
+                # safety trigger
                 if text_1[start_position:end_position] != word:
                     print('Position Error!')
                     quit()
                 writer.writerow([count, pmid, word,reverse_data_dict_biogrid[word], start_position, end_position])
-            start_position = end_position + 1
+            if not add_2:
+                start_position = end_position + 1
+            else:
+                start_position = end_position + 2
 
         writer.writerow([])
         writer.writerow(['-'*20])

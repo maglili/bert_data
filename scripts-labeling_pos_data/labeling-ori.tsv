@@ -1,6 +1,6 @@
 the drosophila eye, a paradigm for epithelial organization, is highly polarized with mirror-image symmetry about the equator. the r3 and r4 photoreceptors in each ommatidium are vital in this polarity; they adopt asymmetrical positions in adult ommatidia and are the site of action for several essential genes. two such genes are frizzled (fz) and dishevelled (dsh), the products of which are components of a signalling pathway required in r3, and which are thought to be activated by a diffusible signal. here we show that the transmembrane receptor notch is required downstream of dsh in r3/r4 for them to adopt distinct fates. by using an enhancer for the notch target gene enhancer of split mdelta, we show that notch becomes activated specifically in r4. we propose that fz/dsh promotes activity of the notch ligand delta and inhibits notch receptor activity in r3, creating a difference in notch signalling capacity between r3 and r4. subsequent feedback in the notch pathway ensures that this difference becomes amplified. this interplay between fz/dsh and notch indicates that polarity is established through local comparisons between two cells and explains how a signal from one position (for example, the equator in the eye) could be interpreted by all ommatidia in the field.
 index	article_pmid	entity_text	entity_fbid	start_position	end_position
-1	10028969	enhancer of split mdelta	FBgn0002734	677	701
+1	10028969	enhancer of split	FBgn0000591	677	694
 1	10028969	eye	FBgn0005558	15	18
 1	10028969	for	FBgn0000721	31	34
 1	10028969	for	FBgn0000721	282	285
@@ -15,6 +15,7 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position
 1	10028969	by	FBgn0000244	630	632
 1	10028969	for	FBgn0000721	651	654
 1	10028969	notch	FBgn0004647	659	664
+1	10028969	mdelta	FBgn0002734	695	701
 1	10028969	notch	FBgn0004647	716	721
 1	10028969	fz	FBgn0001085	776	778
 1	10028969	dsh	FBgn0000499	779	782
@@ -4163,7 +4164,7 @@ photoreceptor development begins in the larval eye imaginal disc, where eight di
 index	article_pmid	entity_text	entity_fbid	start_position	end_position
 180	15302602	rhodopsin 6	FBgn0019940	1001	1012
 180	15302602	rhodopsin 1	FBgn0002940	1051	1062
-180	15302602	enhancer of split mdelta	FBgn0002734	575	599
+180	15302602	enhancer of split	FBgn0000591	575	592
 180	15302602	eye	FBgn0005558	47	50
 180	15302602	disc	FBgn0000459	60	64
 180	15302602	pupal	FBgn0264810	305	310
@@ -4174,6 +4175,7 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position
 180	15302602	r7	FBgn0033672	458	460
 180	15302602	r7	FBgn0033672	546	548
 180	15302602	prospero	FBgn0004595	565	573
+180	15302602	mdelta0.5	FBgn0002734	593	602
 180	15302602	runt	FBgn0003300	608	612
 180	15302602	lost	FBgn0263594	617	621
 180	15302602	r8	FBgn0019940	649	651
@@ -4439,7 +4441,6 @@ mitochondrial biogenesis is a complex and highly regulated process that requires
 index	article_pmid	entity_text	entity_fbid	start_position	end_position
 193	15479229	gaga factor	FBgn0013263	602	613
 193	15479229	alcohol dehydrogenase	FBgn0000055	622	643
-193	15479229	alpha subunit	FBgn0264855	392	405
 193	15479229	separated	FBgn0086680	143	152
 193	15479229	key	FBgn0041205	283	286
 193	15479229	atp	FBgn0010217	442	445
@@ -17105,7 +17106,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position
 the ard gene encodes a beta-subunit of drosophila nicotinic acetylcholine receptors specifically expressed in a subset of neurons. to identify the cis-regulatory region responsible for this cell-specific expression, various 5' fragments of the ard gene were fused to a lacz reporter gene and introduced into the drosophila genome. a dna fragment spanning approximately 760 bp upstream and approximately 140 bp downstream of a cluster of putative transcription start sites produced a pattern of beta-galactosidase activity that resembles the distribution of ard transcripts. both in embryos and adults the levels of lacz rna were similar to those of endogenous ard transcripts, suggesting that the 900 bp fragment harbors all essential elements for proper expression of the ard gene.
 index	article_pmid	entity_text	entity_fbid	start_position	end_position
 749	7516894	ard	FBgn0000038	4	7
-749	7516894	beta-subunit	FBgn0039175	23	35
 749	7516894	for	FBgn0000721	181	184
 749	7516894	ard	FBgn0000038	244	247
 749	7516894	fused	FBgn0001079	258	263

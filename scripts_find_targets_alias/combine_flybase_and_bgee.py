@@ -26,7 +26,8 @@ for idx in range(len(bgee_df)):
     else:
         data_dict[fbid] += ', ' + gene_symbol + ', ' + alias
 
-# -------------------remove redundant alias in data_dict---------------------
+# -------------------remove redundant alias in data_dict---------------------with open('./pickles/reverse_data_dict_biogrid.pickle', 'rb') as handle:
+    reverse_data_dict_biogrid = pickle.load(handle)
 for key,value in data_dict.items():
     value = value.lower()
     value = value.split(', ')
@@ -52,11 +53,12 @@ for key,value in data_dict.items():
             # print('Existing alias data:',data_dict[reverse_data_dict[alias]])
             # print('='*20)
             remove_key_list.append(alias)
+
+remove_key_list = list(set(remove_key_list))
 with open('./pickles/remove_key_list.pickle', 'wb') as f:
     pickle.dump(remove_key_list, f)
 
 # --------------------remove alias from inverse dict------------------------------
-remove_key_list = list(set(remove_key_list))
 print('len of redudant alias:',len(remove_key_list))
 for alias in remove_key_list:
     reverse_data_dict.pop(alias, None)

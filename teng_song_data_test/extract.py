@@ -29,7 +29,9 @@ pos_pmid = pos_df[0].tolist()
 # neg data
 with open('./st_del_pos_blank.pkl','rb') as f:
     df = pickle.load(f)
-#print(df)
+print('Original:')
+print(df)
+print('='*10)
 
 # pos year distribution
 pos_year_list = pos_df[4].to_list()
@@ -43,7 +45,7 @@ for i in range(1985,2021):
 # extract data
 extract_pmid = []
 extract_result = {}
-for i in range(5):
+for i in range(6):#<----------------------------------- modify
     extract_frames = []
     for year, appear_times in pos_year_dict.items():
         random_seed = 0
@@ -77,9 +79,10 @@ for i in range(5):
     extract_result['data'+str(i)] = result
     filename='neg_set'+str(i)+'.csv'
     result.to_csv('./'+filename, header = False, index = False, encoding = 'utf-8')
+    print(result[result['year']==2020])
     print('='*60)
 
-print(extract_result)
+#print(extract_result)
 #examine results
 for dataframe in extract_result.values():
     years = dataframe['year'].to_list()
@@ -94,8 +97,8 @@ for idx, dataframe in extract_result.items():
     pmid_set.append(pmid)
 
 redundant = 0
-for i in range(5):
-    for j in range(i+1,5):
+for i in range(6): #<----------------------------------- modify
+    for j in range(i+1,6): #<----------------------------------- modify
         for pmid in pmid_set[i]:
             if pmid in pmid_set[j]:
                 print('redundant')

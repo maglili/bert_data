@@ -14,7 +14,7 @@ ID_set = []
 url_o='https://pubmed.ncbi.nlm.nih.gov/?term=(((Drosophila%20melanogaster%5BTitle%2FAbstract%5D)%20OR%20(Drosophila%5BTitle%2FAbstract%5D))%20OR%20(D.%20melanogaster%5BTitle%2FAbstract%5D)&size=200&page='
 page = 1
 
-w = csv.writer(open("ID_set.csv", "w", newline='', encoding='utf-8'))
+w = csv.writer(open("../csv_data/ID_set.csv", "w", newline='', encoding='utf-8'))
 
 while True:
     page_str = str(page)

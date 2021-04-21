@@ -11,7 +11,7 @@ from tqdm import tqdm
 with open('../scripts_find_targets_alias/pickles/reverse_data_dict_biogrid.pickle', 'rb') as handle:
     reverse_data_dict_biogrid = pickle.load(handle)
 
-df = pd.read_csv('../csv_data/output_pos.csv', header=None, encoding='utf-8')
+df = pd.read_csv('../csv_data/output-pos-remove_no_abst.csv', header=None, encoding='utf-8')
 df = df[[0,2]]
 
 # writing the output file
@@ -37,7 +37,7 @@ with open('labeling.tsv', 'w', newline='', encoding='utf-8') as csvfile:
         for key,value in reverse_data_dict_biogrid.items():
 
             # alias that containing whike space, e.g. T beta h,  Dm Rg3
-            if ' ' in key:
+            if (' ' in key):
                 if key in text_1:
                     start_position = text_1.find(key)
                     end_position = start_position + len(key)
@@ -78,7 +78,7 @@ with open('labeling.tsv', 'w', newline='', encoding='utf-8') as csvfile:
 
         # rule 2: scan the alias that only 1 word ============================================================
         # e.g. olfD, sbl, bss
-        text_1_split = re.split('\s|/|,',text_1)
+        text_1_split = re.split(r'\s|/|,|\\', text_1) #<-------------add "-"
         start_position = 0
         end_position = 0
         for word in text_1_split:
@@ -98,10 +98,12 @@ with open('labeling.tsv', 'w', newline='', encoding='utf-8') as csvfile:
                     end_position -= 1
                     add_2 = True
 
-            if word in reverse_data_dict_biogrid and skip_frag == False:
+            if (word in reverse_data_dict_biogrid) and (skip_frag == False):
                 # safety trigger
                 if text_1[start_position:end_position] != word:
                     print('Position Error!')
+                    print('word:',word)
+                    print('text_1[start_position:end_position]:',text_1[start_position:end_position])
                     quit()
                 writer.writerow([count, pmid, word,reverse_data_dict_biogrid[word], start_position, end_position])
             if not add_2:

@@ -1,6 +1,13 @@
 def greek2pron(text:str)->str:
     """
-    Convert gerrk letters to english pronunciation.
+    Convert greek letters to english pronunciation.
+    Only convert greek letters,some upper case greek letters will be ignore (e.g. A).
+
+    Args:
+        input:
+            text(string): Greek letters that need to convert.
+        return:
+            text(string): English pronunciation.
     """
     dict = {
     'α':'alpha',

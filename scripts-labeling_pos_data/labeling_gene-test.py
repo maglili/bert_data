@@ -5,6 +5,7 @@ import pickle
 import pandas as pd
 import csv
 import re
+from tools import rm_sign
 from tqdm import tqdm
 
 # reverse_data_dict_biogrid: combining flybase, bgee, biogrid aliases
@@ -20,7 +21,7 @@ with open('labeling.tsv', 'w', newline='', encoding='utf-8') as csvfile:
     writer = csv.writer(csvfile, delimiter='\t')
 
     count = 0 # counter
-    for idx in tqdm(range(len(df))):
+    for idx in range(len(df)):
         count+=1
         pmid, text = df.iloc[idx]
         text = text.lower()
@@ -32,12 +33,9 @@ with open('labeling.tsv', 'w', newline='', encoding='utf-8') as csvfile:
 
         # rule 1: scan the alias that comtaining white space
         # e.g. T beta h,  Dm Rg3
-
-        found_alias = [] # save founded alias
-
         # Find alias that containing whike space, e.g. T beta h,  Dm Rg3
+        found_alias = [] # save founded alias
         for key, value in reverse_data_dict_biogrid.items():
-
             if (' ' in key):
                 if key in text:
                     found_alias.append(key)
@@ -50,20 +48,12 @@ with open('labeling.tsv', 'w', newline='', encoding='utf-8') as csvfile:
         text_split = list(set(text_split))
         if '' in text_split:
             text_split.remove('')
-
         # Processing alias.
         # e.g. su(H), -> su(H)
         for alias in text_split:
-            if len(alias)>1:
-                if alias not in reverse_data_dict_biogrid:
-                    if (not alias[0].isalpha()) and (not alias[0].isnumeric()):
-                        alias = alias[1:]
-                    if (not alias[-1].isalpha()) and (not alias[-1].isnumeric()):
-                        alias = alias[:-1]
-                    if alias in reverse_data_dict_biogrid:
-                        found_alias.append(alias)
-                else:
-                    found_alias.append(alias)
+            alias, found_frag = rm_sign(alias, reverse_data_dict_biogrid)
+            if found_frag:
+                found_alias.append(alias)
 
         # use regular expression to find position
         found_alias = list(set(found_alias))
@@ -75,11 +65,10 @@ with open('labeling.tsv', 'w', newline='', encoding='utf-8') as csvfile:
         save_range.sort()
 
         # remove redundant alias (alias that smaller than another one)
+        # e.g enhancer of split mdelta -> enhancer of split
         remove_list = []
-        print('type(save_range):',type(save_range))
-        print('len(save_range):',len(save_range))
         for i in range(len(save_range)):
-            for j in range(i+1,len(save_range)):
+            for j in range(i+1, len(save_range)):
                 if (save_range[i][0] >= save_range[j][0]) and (save_range[i][1] <= save_range[j][1]):
                     remove_list.append(save_range[i])
                 if (save_range[j][0] >= save_range[i][0]) and (save_range[j][1] <= save_range[i][1]):
@@ -88,13 +77,19 @@ with open('labeling.tsv', 'w', newline='', encoding='utf-8') as csvfile:
         for pos in remove_list:
             save_range.remove(pos)
 
-        # remove wrong alias
-        # e.g. The paper show that ... -> how
+        # remove wrong alias that not complete word
+        # e.g  show ->　how,  13.5 -> 5
         remove_list = []
-        for range in save_range:
-            if (range[0] > 0) and (range[1] < len(text)):
-                if (text[range[0]-1].isalpha()) or (text[range[1]].isalpha()):
-                    remove_list.append(range)
+        for (start, end) in save_range:
+            if (text[start-1].isalpha()) or (text[end].isalpha()):
+                remove_list.append((start, end))
+            if (text[start:end].isnumeric()) and (start-2 >= 0) and (end+1 < len(text)):
+                # print('start:',start)
+                # print('end:',end)
+                # print('text:',len(text))
+                # print('-'*10)
+                if ((not text[start-1].isalpha()) and (text[start-2].isnumeric())) or ((not text[end].isalpha()) and (text[end+1].isnumeric())):
+                    remove_list.append((start, end))
         remove_list = list(set(remove_list))
         for pos in remove_list:
             save_range.remove(pos)
@@ -107,6 +102,3 @@ with open('labeling.tsv', 'w', newline='', encoding='utf-8') as csvfile:
         writer.writerow([])
         writer.writerow(['-'*20])
         writer.writerow([])
-
-        if count == 3:
-            break

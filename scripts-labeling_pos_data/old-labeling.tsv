@@ -37,6 +37,7 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 2	10101114	by	FBgn0000244	46	48
 2	10101114	string	FBgn0003525	82	88
 2	10101114	stg	FBgn0003525	90	93
+2	10101114	cdc2	FBgn0004106	98	102
 2	10101114	kinase	FBgn0022338	148	154
 2	10101114	cdk1	FBgn0004106	156	160
 2	10101114	cdc2	FBgn0004106	162	166
@@ -172,7 +173,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 6	10226011	rp2	FBgn0263998	1326	1329
 6	10226011	for	FBgn0000721	1430	1433
 6	10226011	even-skipped	FBgn0000606	1495	1507
-6	10226011	protein	FBgn0261617	1566	1573
 6	10226011	rp2	FBgn0263998	1588	1591
 6	10226011	protein	FBgn0261617	1633	1640
 6	10226011	was	FBgn0035120	1733	1736
@@ -740,6 +740,8 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 28	10628847	as	FBgn0061469	210	212
 28	10628847	as	FBgn0061469	218	220
 28	10628847	for	FBgn0000721	292	295
+28	10628847	ubx	FBgn0003944	512	515
+28	10628847	ubx	FBgn0003944	521	524
 28	10628847	for	FBgn0000721	527	530
 28	10628847	ultrabithorax	FBgn0003944	564	577
 28	10628847	ubx	FBgn0003944	579	582
@@ -1337,7 +1339,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 50	10926776	pdp1	FBgn0016694	874	878
 50	10926776	by	FBgn0000244	895	897
 50	10926776	at	FBgn0010433	943	945
-50	10926776	protein	FBgn0261617	976	983
 50	10926776	at	FBgn0010433	985	987
 50	10926776	spliced	FBgn0003733	1021	1028
 50	10926776	pdp1	FBgn0016694	1125	1129
@@ -1526,10 +1527,8 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 59	11051550	prospero	FBgn0004595	362	370
 59	11051550	der	FBgn0003731	432	435
 59	11051550	lozenge	FBgn0002576	476	483
-59	11051550	protein	FBgn0261617	484	491
 59	11051550	for	FBgn0000721	509	512
 59	11051550	lozenge	FBgn0002576	541	548
-59	11051550	protein	FBgn0261617	549	556
 59	11051550	der	FBgn0003731	574	577
 59	11051550	sevenless	FBgn0003366	667	676
 59	11051550	sevenless	FBgn0003366	691	700
@@ -2294,16 +2293,20 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 90	11830564	by	FBgn0000244	377	379
 90	11830564	ey	FBgn0005558	380	382
 90	11830564	eye	FBgn0005558	394	397
+90	11830564	so	FBgn0003460	417	419
 90	11830564	pax6	FBgn0005558	505	509
 90	11830564	ey	FBgn0005558	526	528
 90	11830564	toy	FBgn0019650	533	536
+90	11830564	so	FBgn0003460	566	568
 90	11830564	by	FBgn0000244	615	617
 90	11830564	ey	FBgn0005558	671	673
 90	11830564	toy	FBgn0019650	678	681
+90	11830564	so	FBgn0003460	744	746
 90	11830564	eye	FBgn0005558	776	779
 90	11830564	for	FBgn0000721	833	836
 90	11830564	ey	FBgn0005558	841	843
 90	11830564	toy	FBgn0019650	848	851
+90	11830564	so	FBgn0003460	880	882
 90	11830564	eye	FBgn0005558	916	919
 90	11830564	so	FBgn0003460	987	989
 90	11830564	ey	FBgn0005558	1018	1020
@@ -2665,9 +2668,7 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 106	12200449	dna	FBgn0015664	588	591
 106	12200449	trl	FBgn0013263	634	637
 106	12200449	gaga	FBgn0013263	707	711
-106	12200449	gaga	FBgn0013263	830	834
 106	12200449	trl	FBgn0013263	860	863
-106	12200449	gaga	FBgn0013263	974	978
 106	12200449	trl	FBgn0013263	993	996
 106	12200449	similar	FBgn0266411	1067	1074
 106	12200449	gaga	FBgn0013263	1075	1079
@@ -3295,12 +3296,10 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 133	12791270	r7	FBgn0033672	610	612
 133	12791270	for	FBgn0000721	626	629
 133	12791270	pros	FBgn0004595	630	634
-133	12791270	r8	FBgn0019940	645	647
 133	12791270	r7	FBgn0033672	665	667
 133	12791270	r8	FBgn0019940	694	696
 133	12791270	r7	FBgn0033672	733	735
 133	12791270	r8	FBgn0019940	793	795
-133	12791270	r8	FBgn0019940	879	881
 133	12791270	r7	FBgn0033672	896	898
 133	12791270	for	FBgn0000721	963	966
 133	12791270	pros	FBgn0004595	967	971
@@ -3633,9 +3632,7 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 149	1363542	connectin	FBgn0005775	646	655
 149	1363542	by	FBgn0000244	757	759
 149	1363542	ultrabithorax	FBgn0003944	760	773
-149	1363542	protein	FBgn0261617	940	947
 149	1363542	connectin	FBgn0005775	963	972
-149	1363542	protein	FBgn0261617	1058	1065
 149	1363542	connectin	FBgn0005775	1067	1076
 149	1363542	link	FBgn0033855	1134	1138
 
@@ -3671,7 +3668,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 151	1374460	fused	FBgn0001079	872	877
 151	1374460	dna	FBgn0015664	899	902
 151	1374460	chat	FBgn0000303	926	930
-151	1374460	cdna	FBgn0051211	931	935
 151	1374460	cdna	FBgn0051211	1016	1020
 151	1374460	3.3	FBgn0000567	1045	1048
 151	1374460	1.2	FBgn0267001	1053	1056
@@ -3938,7 +3934,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 163	14718563	as	FBgn0061469	1309	1311
 163	14718563	novel	FBgn0035490	1346	1351
 163	14718563	for	FBgn0000721	1371	1374
-163	14718563	protein	FBgn0261617	1379	1386
 163	14718563	tni	FBgn0283471	1442	1445
 
 --------------------
@@ -4148,7 +4143,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 171	15128656	brinker	FBgn0024250	1154	1161
 171	15128656	brk	FBgn0024250	1163	1166
 171	15128656	broad	FBgn0283451	1207	1212
-171	15128656	stripe	FBgn0003499	1213	1219
 171	15128656	by	FBgn0000244	1344	1346
 171	15128656	brk1	FBgn0061198	1347	1351
 171	15128656	brk	FBgn0024250	1438	1441
@@ -4343,7 +4337,7 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 180	15302602	r7	FBgn0033672	458	460
 180	15302602	r7	FBgn0033672	546	548
 180	15302602	prospero	FBgn0004595	565	573
-180	15302602	enhancer of split	FBgn0000591	575	592
+180	15302602	enhancer of split mdelta	FBgn0002734	575	599
 180	15302602	mdelta0.5	FBgn0002734	593	602
 180	15302602	runt	FBgn0003300	608	612
 180	15302602	lost	FBgn0263594	617	621
@@ -5003,7 +4997,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 208	15777699	rpb4	FBgn0263757	882	886
 208	15777699	rpb4	FBgn0263757	951	955
 208	15777699	dref	FBgn0015664	1040	1044
-208	15777699	protein	FBgn0261617	1050	1057
 208	15777699	dna	FBgn0015664	1134	1137
 208	15777699	dref	FBgn0015664	1213	1217
 208	15777699	rpb4	FBgn0263757	1262	1266
@@ -5134,7 +5127,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 213	15870289	midline	FBgn0261963	507	514
 213	15870289	dorsal	FBgn0260632	532	538
 213	15870289	as	FBgn0061469	717	719
-213	15870289	protein	FBgn0261617	809	816
 213	15870289	at	FBgn0010433	871	873
 213	15870289	as	FBgn0061469	903	905
 213	15870289	midline	FBgn0261963	933	940
@@ -5412,7 +5404,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 222	15988027	dprotb	FBgn0013301	365	371
 222	15988027	as	FBgn0061469	449	451
 222	15988027	mst77f	FBgn0086915	524	530
-222	15988027	protein	FBgn0261617	561	568
 222	15988027	protein	FBgn0261617	619	626
 222	15988027	protein	FBgn0261617	666	673
 222	15988027	mst77f	FBgn0086915	703	709
@@ -5499,7 +5490,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 
 the conjugation of the ubiquitin-like protein sumo to lysine side chains plays widespread roles in the regulation of nuclear protein function. since little information is available about the roles of sumo in development, we have screened a collection of chromosomal deficiencies to identify developmental processes regulated by sumo. we found that flies heterozygous for a deficiency uncovering vestigial (vg) and mutations in any of several genes encoding components of the sumo conjugation machinery exhibit severe wing notching. this phenotype is due to an interaction between sumo and vg since it is suppressed by expression of vg from a transgene, and is also observed in flies doubly heterozygous for vg hypomorphic alleles and sumo. in addition, the ability of vg to direct the formation of ectopic wings when misexpressed in the eye field is enhanced by simultaneous misexpression of sumo. in s2 cell transient transfection assays, overexpression of sumo and the sumo conjugating enzyme ubc9, but not a catalytically inactive form of ubc9, results in sumoylation of vg and augments the activation of a vg-responsive reporter. these findings are consistent with the idea that sumoylation stimulates vg function during wing morphogenesis.
 index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_label
-225	16026969	protein	FBgn0261617	38	45
 225	16026969	sumo	FBgn0264922	46	50
 225	16026969	lysine	FBgn0286198	54	60
 225	16026969	protein	FBgn0261617	125	132
@@ -5722,7 +5712,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 235	16207753	eye	FBgn0005558	500	503
 235	16207753	eye	FBgn0005558	532	535
 235	16207753	hedgehog	FBgn0004644	555	563
-235	16207753	protein	FBgn0261617	604	611
 235	16207753	hedgehog	FBgn0004644	702	710
 235	16207753	hh	FBgn0004644	712	714
 235	16207753	eye	FBgn0005558	764	767
@@ -5874,7 +5863,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 241	16343659	dref	FBgn0015664	243	247
 241	16343659	eye	FBgn0005558	262	265
 241	16343659	dna	FBgn0015664	297	300
-241	16343659	rough	FBgn0003267	343	348
 241	16343659	dref	FBgn0015664	397	401
 241	16343659	out	FBgn0259834	424	427
 241	16343659	for	FBgn0000721	437	440
@@ -5966,7 +5954,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 245	16477641	as	FBgn0061469	591	593
 245	16477641	don juan	FBgn0019828	594	602
 245	16477641	as	FBgn0061469	657	659
-245	16477641	protein	FBgn0261617	774	781
 245	16477641	don juan	FBgn0019828	912	920
 245	16477641	don juan like	FBgn0037463	925	938
 245	16477641	by	FBgn0000244	992	994
@@ -6126,6 +6113,7 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 250	16672345	ecdysone receptor	FBgn0000546	701	718
 250	16672345	ecr-b	FBgn0000546	722	727
 250	16672345	ecr-b1	FBgn0000546	806	812
+250	16672345	ecr-b	FBgn0000546	816	821
 250	16672345	ecr-b	FBgn0000546	840	845
 250	16672345	reaper	FBgn0011706	894	900
 250	16672345	reaper	FBgn0011706	957	963
@@ -6175,6 +6163,7 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 251	16713132	caffeine	FBgn0035470	1009	1017
 251	16713132	dna	FBgn0015664	1060	1063
 251	16713132	dna	FBgn0015664	1096	1099
+251	16713132	cyp	FBgn0000449	1222	1225
 251	16713132	dna	FBgn0015664	1373	1376
 251	16713132	cyp6a2	FBgn0000473	1380	1386
 251	16713132	dna	FBgn0015664	1416	1419
@@ -6215,16 +6204,13 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 252	1671662	mas	FBgn0011653	731	734
 252	1671662	mas	FBgn0011653	881	884
 252	1671662	eve	FBgn0000606	898	901
-252	1671662	protein	FBgn0261617	902	909
 252	1671662	as	FBgn0061469	925	927
 252	1671662	as	FBgn0061469	933	935
 252	1671662	for	FBgn0000721	950	953
 252	1671662	early	FBgn0002542	985	990
 252	1671662	eve	FBgn0000606	1067	1070
-252	1671662	protein	FBgn0261617	1071	1078
 252	1671662	for	FBgn0000721	1113	1116
 252	1671662	eve	FBgn0000606	1173	1176
-252	1671662	protein	FBgn0261617	1177	1184
 
 --------------------
 
@@ -6438,7 +6424,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 262	16882722	tinman	FBgn0004110	34	40
 262	16882722	tinman	FBgn0004110	124	130
 262	16882722	dsur	FBgn0028675	232	236
-262	16882722	protein	FBgn0261617	295	302
 262	16882722	sur	FBgn0028675	345	348
 262	16882722	tinman	FBgn0004110	501	507
 262	16882722	dsur	FBgn0028675	527	531
@@ -7192,6 +7177,7 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 294	17381512	for	FBgn0000721	508	511
 294	17381512	rfc1	FBgn0004913	640	644
 294	17381512	dre1	FBgn0024510	844	848
+294	17381512	38	FBgn0016687	878	880
 294	17381512	dre3	FBgn0250789	888	892
 294	17381512	dref	FBgn0015664	998	1002
 294	17381512	rfc1	FBgn0004913	1074	1078
@@ -7521,6 +7507,7 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 in this paper we analyze the expression in follicular cells and regulation of the vitelline membrane protein gene we identified in region 32e of the second chromosome of d. melanogaster (vmp32e). we report germ line transformation results obtained with different kinds of gene fusion leading to the identification of a follicular cell subpopulation involved in the expression of the vmp32e. we have characterized two 5' non-transcribed regions (-465/-249; -135/-39) where the cis-acting transcriptional regulatory sequences, directing tissue and temporal specificity, are contained. the region between -465 and -249, which appears to control transcriptional high efficiency, does not behave as an enhancer as it is incapable of conferring any expression to a reporter gene. the region between -135 and -39 can confer temporal specificity of expression of the vmp32e gene, albeit at a very low level. most interestingly, sequence similarities to ecdysone response elements raise the possibility of hormonal control also for vmp gene expression.
 index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_label
 308	1768620	membrane protein	FBgn0267326	92	108
+308	1768620	region 3	FBgn0003721	131	139
 308	1768620	vmp32e	FBgn0014076	187	193
 308	1768620	vmp32e	FBgn0014076	383	389
 308	1768620	as	FBgn0061469	691	693
@@ -7719,7 +7706,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 315	17967878	dimm	FBgn0023091	501	505
 315	17967878	dimm	FBgn0023091	557	561
 315	17967878	was	FBgn0035120	571	574
-315	17967878	protein	FBgn0261617	612	619
 315	17967878	dimm	FBgn0023091	898	902
 315	17967878	similar	FBgn0266411	946	953
 315	17967878	dimm	FBgn0023091	1021	1025
@@ -7927,8 +7913,10 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 insulin resistance is a major feature of pathological states such as obesity and diabetes. a consequence of insulin resistance is enhanced lipolysis, which causes excessive release of free fatty acids and deregulates fatty acid homeostasis. the transcription factor foxo1 has a central role in the regulation of glucose levels by insulin: reduced insulin signaling causes foxo1 activation, which increases hepatic glucose production by activating transcription of phosphoenolpyruvate carboxykinase and glucose-6-phosphatase mrnas. our results suggest an additional role for foxo transcription factors: the regulation of lipid homeostasis by insulin. here, we show that in flies, dfoxo regulates lipase 4 (dlip4), a drosophila homologue of human acid lipases. dfoxo binds and activates the dlip4 promoter, in vitro and in vivo, and regulates dlip4 expression. in addition, dlip4 mrna expression in flies is dependent on dfoxo. our results support a model where dfoxo acts as a key modulator of lipid metabolism by insulin signaling and integrates insulin responses to glucose and lipid homeostasis.
 index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_label
 325	18234213	as	FBgn0061469	66	68
+325	18234213	foxo	FBgn0038197	266	270
 325	18234213	by	FBgn0000244	327	329
 325	18234213	reduced	FBgn0283467	339	346
+325	18234213	foxo	FBgn0038197	372	376
 325	18234213	by	FBgn0000244	433	435
 325	18234213	phosphoenolpyruvate carboxykinase	FBgn0003067	464	497
 325	18234213	glucose-6-phosphatase	FBgn0031463	502	523
@@ -8058,7 +8046,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 331	18392760	dmprat	FBgn0004901	706	712
 331	18392760	dmprat2	FBgn0041194	717	724
 331	18392760	prat	FBgn0004901	730	734
-331	18392760	protein	FBgn0261617	810	817
 331	18392760	dmprat	FBgn0004901	830	836
 331	18392760	dmprat2	FBgn0041194	841	848
 331	18392760	dmprat	FBgn0004901	898	904
@@ -8147,7 +8134,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 333	18418383	defective	FBgn0263490	797	806
 333	18418383	was	FBgn0035120	821	824
 333	18418383	for	FBgn0000721	842	845
-333	18418383	protein	FBgn0261617	898	905
 333	18418383	for	FBgn0000721	919	922
 333	18418383	tcf	FBgn0085432	979	982
 333	18418383	tcf	FBgn0085432	1026	1029
@@ -8521,6 +8507,7 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 350	18760387	as	FBgn0061469	403	405
 350	18760387	dref	FBgn0015664	417	421
 350	18760387	bib	FBgn0000180	491	494
+350	18760387	aqp	FBgn0033807	514	517
 350	18760387	dref	FBgn0015664	549	553
 350	18760387	bib	FBgn0000180	557	560
 350	18760387	dref	FBgn0015664	578	582
@@ -8542,6 +8529,10 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 351	18802449	stat	FBgn0016917	72	76
 351	18802449	separated	FBgn0086680	113	122
 351	18802449	by	FBgn0000244	123	125
+351	18802449	stat	FBgn0016917	163	167
+351	18802449	stat	FBgn0016917	189	193
+351	18802449	stat	FBgn0016917	218	222
+351	18802449	stat	FBgn0016917	227	231
 351	18802449	was	FBgn0035120	321	324
 351	18802449	stat	FBgn0016917	446	450
 351	18802449	stat92e	FBgn0016917	506	513
@@ -8700,7 +8691,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 357	1902805	stripe	FBgn0003499	561	567
 357	1902805	6	FBgn0085387	580	581
 357	1902805	by	FBgn0000244	603	605
-357	1902805	stripe	FBgn0003499	932	938
 357	1902805	stripe	FBgn0003499	1011	1017
 
 --------------------
@@ -8853,7 +8843,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 363	19062282	dna	FBgn0015664	1225	1228
 363	19062282	by	FBgn0000244	1241	1243
 363	19062282	tcf	FBgn0085432	1248	1251
-363	19062282	hmg	FBgn0263782	1309	1312
 363	19062282	tcf	FBgn0085432	1351	1354
 
 --------------------
@@ -9440,7 +9429,6 @@ the drosophila bithorax complex (bx-c) controls segmental development by selecti
 index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_label
 391	1979031	bithorax complex	FBgn0003944	15	31
 391	1979031	by	FBgn0000244	70	72
-391	1979031	protein	FBgn0261617	101	108
 391	1979031	ubx	FBgn0003944	119	122
 391	1979031	abd-a	FBgn0000014	124	129
 391	1979031	abd-b	FBgn0000015	134	139
@@ -10356,13 +10344,20 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 430	20637846	by	FBgn0000244	255	257
 430	20637846	12	FBgn0015245	305	307
 430	20637846	obp	FBgn0050443	419	422
+430	20637846	obp	FBgn0050443	430	433
+430	20637846	obp	FBgn0050443	441	444
 430	20637846	by	FBgn0000244	455	457
 430	20637846	at	FBgn0010433	475	477
 430	20637846	early	FBgn0002542	482	487
 430	20637846	by	FBgn0000244	547	549
+430	20637846	obp	FBgn0050443	679	682
+430	20637846	obp	FBgn0050443	690	693
 430	20637846	lost	FBgn0263594	716	720
 430	20637846	at	FBgn0010433	815	817
+430	20637846	obp	FBgn0050443	822	825
 430	20637846	obp	FBgn0050443	917	920
+430	20637846	obp	FBgn0050443	1013	1016
+430	20637846	obp	FBgn0050443	1024	1027
 430	20637846	chain	FBgn0264695	1202	1207
 430	20637846	as	FBgn0061469	1237	1239
 430	20637846	for	FBgn0000721	1260	1263
@@ -10370,8 +10365,11 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 430	20637846	was	FBgn0035120	1465	1468
 430	20637846	obp	FBgn0050443	1559	1562
 430	20637846	at	FBgn0010433	1568	1570
+430	20637846	obp	FBgn0050443	1575	1578
 430	20637846	as	FBgn0061469	1615	1617
 430	20637846	as	FBgn0061469	1623	1625
+430	20637846	obp	FBgn0050443	1674	1677
+430	20637846	obp	FBgn0050443	1685	1688
 
 --------------------
 
@@ -10387,6 +10385,7 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 431	2065664	kr	FBgn0001325	416	418
 431	2065664	kr	FBgn0001325	541	543
 431	2065664	kr	FBgn0001325	610	612
+431	2065664	kr	FBgn0001325	654	656
 431	2065664	bcd	FBgn0000166	676	679
 431	2065664	multiple	FBgn0051719	734	742
 431	2065664	bcd	FBgn0000166	750	753
@@ -10572,11 +10571,9 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 serendipity (sry) beta (beta) and delta (delta) are two finger protein genes resulting from a duplication event. comparison of their respective protein products shows interspersed blocks of conserved and divergent amino-acid sequences. the most extensively conserved region corresponds to the predicted dna-binding domain which includes 6 contiguous fingers; no significant sequence conservation is found upstream and downstream of the protein-coding region. we have analysed the evolutionary divergence of the sry beta and delta proteins on two separate levels, their embryonic pattern of expression and their dna-binding properties in vitro and in vivo. by using specific antibodies and transformant lines containing beta-galactosidase fusion genes, we show that the sry beta and sry delta proteins are maternally inherited and present in embryonic nuclei at the onset of zygotic transcription, suggesting that they are transcription factors involved in this process. zygotic synthesis of the sry beta protein starts during nuclear division cycles 12-13, prior to cellularisation of the blastoderm, while the zygotic sry delta protein is not detectable before germ band extension (stage 10 embryos). contrary to sry delta, the zygotic sry beta protein constitutes only a minor fraction of the total embryonic protein. the sry beta and delta proteins made in e. coli bind to dna, with partly overlapping specificities. their in vivo patterns of binding to dna, visualised by immunostaining polytene chromosomes, differ both in the number and position of their binding sites. thus changes in expression pattern and dna-binding specificity have contributed to the evolution of the sry beta and delta genes.
 index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_label
 440	2081456	protein	FBgn0261617	63	70
-440	2081456	protein	FBgn0261617	144	151
 440	2081456	dna	FBgn0015664	303	306
 440	2081456	6	FBgn0085387	337	338
 440	2081456	no	FBgn0261808	359	361
-440	2081456	protein	FBgn0261617	436	443
 440	2081456	sry beta	FBgn0003511	511	519
 440	2081456	dna	FBgn0015664	611	614
 440	2081456	by	FBgn0000244	656	658
@@ -10690,7 +10687,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 444	2104658	by	FBgn0000244	702	704
 444	2104658	was	FBgn0035120	833	836
 444	2104658	27	FBgn0001226	904	906
-444	2104658	gaga	FBgn0013263	980	984
 444	2104658	actin 5c	FBgn0000042	1001	1009
 444	2104658	for	FBgn0000721	1064	1067
 444	2104658	as	FBgn0061469	1090	1092
@@ -10749,6 +10745,8 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 446	21108319	tin	FBgn0004110	634	637
 446	21108319	tinman	FBgn0004110	712	718
 446	21108319	tinman	FBgn0004110	818	824
+446	21108319	tin	FBgn0004110	840	843
+446	21108319	tin	FBgn0004110	849	852
 446	21108319	tin	FBgn0004110	951	954
 446	21108319	midline	FBgn0261963	980	987
 
@@ -10843,7 +10841,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 451	21151964	for	FBgn0000721	424	427
 451	21151964	dark	FBgn0263864	446	450
 451	21151964	as	FBgn0061469	573	575
-451	21151964	yellow	FBgn0004034	695	701
 451	21151964	protein	FBgn0261617	767	774
 451	21151964	as	FBgn0061469	856	858
 451	21151964	as	FBgn0061469	864	866
@@ -11156,7 +11153,6 @@ systematic annotation of gene regulatory elements is a major challenge in genome
 index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_label
 465	21430782	polycomb	FBgn0003042	345	353
 465	21430782	for	FBgn0000721	788	791
-465	21430782	histone	FBgn0001197	823	830
 465	21430782	at	FBgn0010433	897	899
 465	21430782	for	FBgn0000721	1047	1050
 
@@ -11191,7 +11187,6 @@ sphinx is a lineage-specific non-coding rna gene involved in regulating courtshi
 index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_label
 467	21541324	sphinx	FBgn0083990	0	6
 467	21541324	out	FBgn0259834	235	238
-467	21541324	protein	FBgn0261617	430	437
 467	21541324	was	FBgn0035120	530	533
 467	21541324	drive	FBgn0019972	548	553
 467	21541324	sphinx	FBgn0083990	554	560
@@ -11441,7 +11436,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 eater is a transmembrane protein that mediates phagocytosis in drosophila. eater was identified in a microarray analysis of genes downregulated in s2 cells, in which serpent had been knocked down by rnai. the gene was shown to be expressed predominantly in plasmatocytes after embryonic development. we have extensively analyzed the transcriptional enhancer controlling eater expression with the following findings: the enhancer reproduces the plasmatocyte expression pattern of the gene as verified by anti-p1 antibody staining and a 526-basepair dna region is active in lymph gland and hemolymph plasmatocytes. this dna contains several gata elements that serve as putative-binding sites for serpent. site-directed mutagenesis of two of these gata sites abolishes eater expression in both lymph gland and hemolymph plasmatocytes. this suggests that serpent regulates eater expression by binding these gata sites, which was confirmed by gel shift analysis. these analyses allowed us to use eater-gal4 to force plasmatocyte to lamellocyte differentiation.
 index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_label
 478	21809435	eater	FBgn0243514	0	5
-478	21809435	protein	FBgn0261617	25	32
 478	21809435	eater	FBgn0243514	75	80
 478	21809435	was	FBgn0035120	81	84
 478	21809435	serpent	FBgn0003507	166	173
@@ -11653,7 +11647,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 486	22005458	abd-b	FBgn0000015	724	729
 486	22005458	protein	FBgn0261617	730	737
 486	22005458	abd-b	FBgn0000015	755	760
-486	22005458	protein	FBgn0261617	1022	1029
 486	22005458	for	FBgn0000721	1058	1061
 
 --------------------
@@ -12244,6 +12237,7 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 511	22537497	midline	FBgn0261963	1170	1177
 511	22537497	link	FBgn0033855	1192	1196
 511	22537497	link	FBgn0033855	1245	1249
+511	22537497	6	FBgn0085387	1276	1277
 511	22537497	midline	FBgn0261963	1298	1305
 511	22537497	was	FBgn0035120	1317	1320
 511	22537497	13	FBgn0263111	1450	1452
@@ -12272,7 +12266,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 512	22541432	bcd	FBgn0000166	198	201
 512	22541432	by	FBgn0000244	288	290
 512	22541432	bcd	FBgn0000166	328	331
-512	22541432	protein	FBgn0261617	388	395
 512	22541432	runt	FBgn0003300	396	400
 512	22541432	run	FBgn0003300	402	405
 512	22541432	for	FBgn0000721	483	486
@@ -12318,7 +12311,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 514	22564415	by	FBgn0000244	215	217
 514	22564415	by	FBgn0000244	274	276
 514	22564415	fascin	FBgn0003447	345	351
-514	22564415	protein	FBgn0261617	431	438
 514	22564415	fascin	FBgn0003447	544	550
 514	22564415	fascin	FBgn0003447	552	558
 514	22564415	fascin	FBgn0003447	602	608
@@ -12342,6 +12334,7 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 515	22632976	pickpocket	FBgn0020258	427	437
 515	22632976	ppk	FBgn0020258	439	442
 515	22632976	ppk23	FBgn0030844	452	457
+515	22632976	ppk	FBgn0020258	462	465
 515	22632976	fruitless	FBgn0004652	492	501
 515	22632976	for	FBgn0000721	549	552
 515	22632976	early	FBgn0002542	1050	1055
@@ -12810,9 +12803,15 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 
 insect odorant-binding proteins function in the sensing of odors, tastes, and pheromones. genes encoding two odorant-binding proteins, obp57d and obp57e, were identified to be involved in the behavioral adaptation of drosophila sechellia to its host plant. the two genes are expressed in cells associated with taste sensilla on the legs, and the expression pattern in the legs is conserved among closely related species. to identify the cis-regulatory elements necessary for the expression in the leg sensilla, the promoter sequences of obp57d and obp57e were compared among species. two types of conserved sequence-motifs were found as candidate cis-regulatory elements. functions of these conserved elements in the promoters of d. melanogaster obp57d and obp57e were examined by using a newly constructed vector that combines the advantages of φc31 integrase-based transformation and gypsy transposable-element-derived insulators. by gfp-reporter assay using the new vector, it was confirmed that these conserved elements are necessary for the expression in the legs, working synergistically with each other to affect the expression level. single-nucleotide substitutions in these elements dramatically changed the promoter activity. these results provide insight into the molecular mechanism for evolution of adaptive behavior via modulation of obp expression levels.
 index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_label
+534	23412634	obp	FBgn0050443	135	138
+534	23412634	obp	FBgn0050443	146	149
 534	23412634	for	FBgn0000721	471	474
 534	23412634	leg	FBgn0003300	497	500
+534	23412634	obp	FBgn0050443	537	540
+534	23412634	obp	FBgn0050443	548	551
 534	23412634	as	FBgn0061469	634	636
+534	23412634	obp	FBgn0050443	746	749
+534	23412634	obp	FBgn0050443	757	760
 534	23412634	by	FBgn0000244	778	780
 534	23412634	by	FBgn0000244	933	935
 534	23412634	was	FBgn0035120	980	983
@@ -12857,7 +12856,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 536	23545328	ttk69	FBgn0003870	675	680
 536	23545328	expansion	FBgn0033668	723	732
 536	23545328	by	FBgn0000244	798	800
-536	23545328	protein	FBgn0261617	888	895
 536	23545328	lamina ancestor	FBgn0016031	896	911
 536	23545328	protein	FBgn0261617	933	940
 536	23545328	paxillin	FBgn0041789	941	949
@@ -14097,7 +14095,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 587	2504583	fused	FBgn0001079	270	275
 587	2504583	beta 2 tubulin	FBgn0003889	441	455
 587	2504583	drive	FBgn0019972	506	511
-587	2504583	23	FBgn0001224	652	654
 587	2504583	29	FBgn0003559	678	680
 587	2504583	at	FBgn0010433	808	810
 587	2504583	as	FBgn0061469	859	861
@@ -14458,7 +14455,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 602	25464903	by	FBgn0000244	117	119
 602	25464903	by	FBgn0000244	164	166
 602	25464903	protein	FBgn0261617	259	266
-602	25464903	protein	FBgn0261617	272	279
 602	25464903	tpl94d	FBgn0051281	280	286
 602	25464903	for	FBgn0000721	382	385
 602	25464903	similar	FBgn0266411	432	439
@@ -14513,18 +14509,24 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 604	25564665	even-skipped	FBgn0000606	259	271
 604	25564665	eve	FBgn0000606	273	276
 604	25564665	stripe	FBgn0003499	278	284
+604	25564665	eve	FBgn0000606	299	302
 604	25564665	eve	FBgn0000606	365	368
 604	25564665	at	FBgn0010433	380	382
 604	25564665	multiple	FBgn0051719	409	417
+604	25564665	eve	FBgn0000606	459	462
 604	25564665	eve	FBgn0000606	504	507
 604	25564665	stripe	FBgn0003499	508	514
 604	25564665	eve	FBgn0000606	550	553
 604	25564665	stripe	FBgn0003499	554	560
 604	25564665	by	FBgn0000244	577	579
+604	25564665	eve	FBgn0000606	609	612
 604	25564665	eve	FBgn0000606	656	659
 604	25564665	stripe	FBgn0003499	660	666
+604	25564665	eve	FBgn0000606	679	682
 604	25564665	eve	FBgn0000606	716	719
 604	25564665	stripe	FBgn0003499	720	726
+604	25564665	eve	FBgn0000606	823	826
+604	25564665	eve	FBgn0000606	857	860
 604	25564665	shadow	FBgn0003312	885	891
 
 --------------------
@@ -14544,7 +14546,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 605	25579975	daughterless	FBgn0267821	609	621
 605	25579975	protein	FBgn0261617	622	629
 605	25579975	expanded	FBgn0004583	667	675
-605	25579975	protein	FBgn0261617	749	756
 605	25579975	crumbs	FBgn0259685	757	763
 605	25579975	expanded	FBgn0004583	833	841
 
@@ -14706,12 +14707,10 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 613	2569362	wingless	FBgn0284084	138	146
 613	2569362	wg	FBgn0284084	148	150
 613	2569362	eve	FBgn0000606	182	185
-613	2569362	protein	FBgn0261617	186	193
 613	2569362	at	FBgn0010433	227	229
 613	2569362	ubx	FBgn0003944	234	237
 613	2569362	dna	FBgn0015664	253	256
 613	2569362	eve	FBgn0000606	288	291
-613	2569362	protein	FBgn0261617	292	299
 613	2569362	start	FBgn0035028	376	381
 613	2569362	dna	FBgn0015664	395	398
 613	2569362	eve	FBgn0000606	458	461
@@ -14725,7 +14724,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 613	2569362	protein	FBgn0261617	763	770
 613	2569362	dna	FBgn0015664	796	799
 613	2569362	eve	FBgn0000606	834	837
-613	2569362	protein	FBgn0261617	838	845
 613	2569362	at	FBgn0010433	906	908
 613	2569362	protein	FBgn0261617	1002	1009
 613	2569362	as	FBgn0061469	1101	1103
@@ -15584,6 +15582,7 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 649	26975664	vestigial	FBgn0003975	475	484
 649	26975664	vg	FBgn0003975	486	488
 649	26975664	nab	FBgn0259986	588	591
+649	26975664	nab	FBgn0259986	653	656
 649	26975664	nab2	FBgn0028471	658	662
 649	26975664	nab	FBgn0259986	720	723
 649	26975664	novel	FBgn0035490	745	750
@@ -15629,7 +15628,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 650	27058369	hox	FBgn0004110	1113	1116
 650	27058369	exd	FBgn0000611	1117	1120
 650	27058369	hth	FBgn0001235	1121	1124
-650	27058369	protein	FBgn0261617	1141	1148
 650	27058369	protein	FBgn0261617	1149	1156
 650	27058369	protein	FBgn0261617	1161	1168
 650	27058369	dna	FBgn0015664	1169	1172
@@ -15856,7 +15854,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 659	27810970	protein	FBgn0261617	750	757
 659	27810970	mst77f	FBgn0086915	850	856
 659	27810970	similar	FBgn0266411	865	872
-659	27810970	protein	FBgn0261617	990	997
 
 --------------------
 
@@ -16028,7 +16025,6 @@ in drosophila spermatogenesis transcription occurs only premeiotically while tra
 index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_label
 669	2835228	mst(3)gl-9	FBgn0002862	173	183
 669	2835228	was	FBgn0035120	266	269
-669	2835228	protein	FBgn0261617	292	299
 669	2835228	by	FBgn0000244	308	310
 669	2835228	mst(3)gl-9	FBgn0002862	311	321
 669	2835228	mst(3)gl-9	FBgn0002862	438	448
@@ -16117,7 +16113,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 672	2846287	for	FBgn0000721	51	54
 672	2846287	for	FBgn0000721	129	132
 672	2846287	for	FBgn0000721	294	297
-672	2846287	protein	FBgn0261617	307	314
 672	2846287	early	FBgn0002542	428	433
 672	2846287	bicoid	FBgn0000166	629	635
 672	2846287	bcd	FBgn0000166	637	640
@@ -16520,11 +16515,9 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 689	29247240	for	FBgn0000721	213	216
 689	29247240	oamb	FBgn0024944	416	420
 689	29247240	for	FBgn0000721	452	455
-689	29247240	oamb	FBgn0024944	584	588
 689	29247240	oamb	FBgn0024944	689	693
 689	29247240	octβ3r	FBgn0250910	742	748
 689	29247240	by	FBgn0000244	905	907
-689	29247240	oamb	FBgn0024944	908	912
 689	29247240	octβ3r	FBgn0250910	917	923
 689	29247240	for	FBgn0000721	1092	1095
 
@@ -16703,7 +16696,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 we have analyzed the cis-acting regulatory sequences of the drosophila melanogaster rh2 gene that encodes the protein component of a rhodopsin which is expressed in ocellar photoreceptor cells. dna fragments containing the start point of transcription of the rh2 gene were fused to either the escherichia coli chloramphenicol acetyltransferase (cat) or lacz (beta-galactosidase) genes and introduced into the drosophila germline by p-element-mediated transformation. expression of the e. coli genes was then used to assay the ability of various sequences from the rh2 gene to confer upon the indicator genes the rh2 pattern of expression. fragments containing between 4.3 kb and 183 bp upstream of the start of transcription plus the first 32 bp of the 5'-untranslated leader were found to result in nearly identical levels of head-specific cat expression. deletion of rh2 sequences distal to position -112 bp resulted in loss of detectable cat expression from these rh2/cat fusion constructs. we have, therefore, defined a region essential for head-specific expression of the rh2 gene to a region extending from -183 to -112. we have determined the dna sequence of the rh2 promoter from -448 to +32 and have found an 11-bp sequence which is also present in the upstream flanking sequences of two other photoreceptor-specific genes (ninae and ninac). by histochemical staining of beta-galactosidase expressed under the control of the rh2 promoter and by analyzing the effect of the ocelliless mutation on the expression of an rh2/cat fusion gene, we have been able to demonstrate that this promoter is active in ocelli.
 index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_label
 697	2975615	rh2	FBgn0003248	84	87
-697	2975615	protein	FBgn0261617	110	117
 697	2975615	dna	FBgn0015664	194	197
 697	2975615	start	FBgn0035028	223	228
 697	2975615	point	FBgn0003118	229	234
@@ -16928,6 +16920,7 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 707	3011424	26	FBgn0001225	189	191
 707	3011424	for	FBgn0000721	286	289
 707	3011424	hsp23	FBgn0001224	290	295
+707	3011424	26	FBgn0001225	372	374
 707	3011424	was	FBgn0035120	442	445
 707	3011424	at	FBgn0010433	460	462
 707	3011424	for	FBgn0000721	468	471
@@ -16972,7 +16965,6 @@ we have analyzed the cis-acting regulatory sequences of the ninae gene. this gen
 index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_label
 710	3040524	ninae	FBgn0002940	60	65
 710	3040524	opsin	FBgn0002940	124	129
-710	3040524	protein	FBgn0261617	135	142
 710	3040524	eye	FBgn0005558	223	226
 710	3040524	dna	FBgn0015664	228	231
 710	3040524	start	FBgn0035028	257	262
@@ -17368,6 +17360,7 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 
 the specification and morphogenesis of an organ requires the coordinate deployment and integration of regulatory information, including sex specific information when the organ is sex specific. only a few gene networks controlling size and pattern development have been deciphered, which limits the emergence of principles, general or not, underlying the organ-specifying gene networks. here we elucidate the genetic and molecular network determining the control of size in the drosophila abdominal a9 primordium, contributing to the female genitalia. this network requires axial regulatory information provided by the hox protein abdominal-br (abd-br), the hox cofactors extradenticle (exd) and homothorax (hth), and the sex specific transcription factor doublesex female (dsxf). these factors synergize to control size in the female a9 by the coordinate regulation of the decapentaplegic (dpp) growth pathway. molecular dissection of the dpp regulatory region and in vivo protein interaction experiments suggest that abd-br, exd, hth and dsxf coordinately regulate a short dpp enhancer to repress dpp expression and restrict female a9 size. the same regulators can also suppress dpp expression in the a8, but this requires the absence of the abd-bm isoform, which specifies a8. these results delineate the network controlling female a9 growth in drosophila.
 index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_label
+728	31251896	abdominal a	FBgn0000014	488	499
 728	31251896	by	FBgn0000244	611	613
 728	31251896	hox	FBgn0004110	618	621
 728	31251896	protein	FBgn0261617	622	629
@@ -17820,7 +17813,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 748	7489720	fkh	FBgn0000659	959	962
 748	7489720	out	FBgn0259834	1011	1014
 748	7489720	dna	FBgn0015664	1125	1128
-748	7489720	protein	FBgn0261617	1144	1151
 748	7489720	by	FBgn0000244	1259	1261
 748	7489720	fkh	FBgn0000659	1289	1292
 748	7489720	for	FBgn0000721	1311	1314
@@ -17910,7 +17902,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 752	7555732	broad	FBgn0283451	118	123
 752	7555732	narrow	FBgn0283508	146	152
 752	7555732	by	FBgn0000244	318	320
-752	7555732	stripe	FBgn0003499	323	329
 752	7555732	at	FBgn0010433	330	332
 752	7555732	by	FBgn0000244	367	369
 752	7555732	stripe	FBgn0003499	549	555
@@ -18154,7 +18145,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 761	7607084	for	FBgn0000721	264	267
 761	7607084	6	FBgn0085387	302	303
 761	7607084	stripe	FBgn0003499	380	386
-761	7607084	stripe	FBgn0003499	481	487
 761	7607084	by	FBgn0000244	515	517
 761	7607084	protein	FBgn0261617	522	529
 761	7607084	stripe	FBgn0003499	556	562
@@ -18240,7 +18230,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 763	7621828	dif	FBgn0011274	815	818
 763	7621828	by	FBgn0000244	842	844
 763	7621828	dif	FBgn0011274	845	848
-763	7621828	protein	FBgn0261617	885	892
 763	7621828	dorsal	FBgn0260632	908	914
 763	7621828	cecropin a1	FBgn0000276	942	953
 763	7621828	dif	FBgn0011274	1031	1034
@@ -18514,7 +18503,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 775	7821226	abd-a	FBgn0000014	731	736
 775	7821226	for	FBgn0000721	804	807
 775	7821226	extradenticle	FBgn0000611	1092	1105
-775	7821226	protein	FBgn0261617	1106	1113
 775	7821226	protein	FBgn0261617	1172	1179
 775	7821226	dna	FBgn0015664	1302	1305
 775	7821226	ubx	FBgn0003944	1358	1361
@@ -18800,7 +18788,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 786	7915131	by	FBgn0000244	377	379
 786	7915131	ubx	FBgn0003944	399	402
 786	7915131	novel	FBgn0035490	488	493
-786	7915131	protein	FBgn0261617	508	515
 786	7915131	by	FBgn0000244	517	519
 786	7915131	for	FBgn0000721	609	612
 786	7915131	ubx	FBgn0003944	680	683
@@ -19001,7 +18988,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 795	8096812	beta-gal	FBgn0001089	435	443
 795	8096812	abd-b	FBgn0000015	490	495
 795	8096812	iab5	FBgn0000015	534	538
-795	8096812	protein	FBgn0261617	588	595
 795	8096812	hunchback	FBgn0001180	622	631
 795	8096812	knirps	FBgn0001320	645	651
 795	8096812	as	FBgn0061469	656	658
@@ -19385,7 +19371,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 811	8355700	dna	FBgn0015664	356	359
 811	8355700	ftz	FBgn0001077	391	394
 811	8355700	dnase	FBgn0000477	442	447
-811	8355700	protein	FBgn0261617	567	574
 811	8355700	dna	FBgn0015664	647	650
 811	8355700	multiple	FBgn0051719	745	753
 811	8355700	multiple	FBgn0051719	852	860
@@ -19395,7 +19380,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 811	8355700	ftz	FBgn0001077	941	944
 811	8355700	narrow	FBgn0283508	986	992
 811	8355700	dna	FBgn0015664	1032	1035
-811	8355700	protein	FBgn0261617	1070	1077
 811	8355700	by	FBgn0000244	1113	1115
 811	8355700	ftz	FBgn0001077	1155	1158
 811	8355700	by	FBgn0000244	1224	1226
@@ -20041,7 +20025,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 841	8769644	ci	FBgn0004859	765	767
 841	8769644	as	FBgn0061469	781	783
 841	8769644	activator	FBgn0265784	802	811
-841	8769644	protein	FBgn0261617	872	879
 841	8769644	for	FBgn0000721	894	897
 841	8769644	ptc	FBgn0003892	983	986
 841	8769644	hh	FBgn0004644	1013	1015
@@ -20206,7 +20189,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 848	8951796	teashirt	FBgn0003866	15	23
 848	8951796	trunk	FBgn0003751	135	140
 848	8951796	protein	FBgn0261617	170	177
-848	8951796	protein	FBgn0261617	279	286
 848	8951796	trunk	FBgn0003751	353	358
 848	8951796	modulo	FBgn0002780	522	528
 848	8951796	zinc-finger protein	FBgn0037446	544	563
@@ -20536,7 +20518,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 861	9232593	don juan	FBgn0019828	87	95
 861	9232593	for	FBgn0000721	107	110
 861	9232593	protein	FBgn0261617	128	135
-861	9232593	protein	FBgn0261617	239	246
 861	9232593	don juan	FBgn0019828	266	274
 861	9232593	dj	FBgn0019828	332	334
 861	9232593	blot	FBgn0027660	390	394
@@ -20649,7 +20630,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 865	9343437	so	FBgn0003460	267	269
 865	9343437	grainyhead	FBgn0259211	407	417
 865	9343437	for	FBgn0000721	479	482
-865	9343437	protein	FBgn0261617	531	538
 865	9343437	pupal	FBgn0264810	591	596
 865	9343437	grainyhead	FBgn0259211	654	664
 865	9343437	grainyhead	FBgn0259211	750	760
@@ -20857,6 +20837,7 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 872	9425016	for	FBgn0000721	698	701
 872	9425016	per	FBgn0003068	702	705
 872	9425016	per	FBgn0003068	733	736
+872	9425016	per	FBgn0003068	793	796
 872	9425016	per	FBgn0003068	856	859
 872	9425016	for	FBgn0000721	979	982
 872	9425016	per	FBgn0003068	1037	1040
@@ -20968,6 +20949,7 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 876	9450935	box	FBgn0046114	429	432
 876	9450935	mef2	FBgn0011656	445	449
 876	9450935	twist	FBgn0003900	491	496
+876	9450935	type 1	FBgn0030395	539	545
 876	9450935	by	FBgn0000244	561	563
 876	9450935	twist	FBgn0003900	605	610
 876	9450935	mef2	FBgn0011656	639	643
@@ -21046,6 +21028,7 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 879	9491376	by	FBgn0000244	541	543
 879	9491376	dnase	FBgn0000477	606	611
 879	9491376	was	FBgn0035120	734	737
+879	9491376	10	FBgn0021742	776	778
 879	9491376	had	FBgn0286508	846	849
 879	9491376	10	FBgn0021742	864	866
 879	9491376	abdominal-b	FBgn0000015	956	967
@@ -21080,7 +21063,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 880	9502727	cubitus interruptus	FBgn0004859	454	473
 880	9502727	ci	FBgn0004859	475	477
 880	9502727	hh	FBgn0004644	514	516
-880	9502727	protein	FBgn0261617	564	571
 880	9502727	patched	FBgn0003892	572	579
 880	9502727	ptc	FBgn0003892	581	584
 880	9502727	as	FBgn0061469	591	593
@@ -21193,7 +21175,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 883	9649507	as-c	FBgn0000022	197	201
 883	9649507	as-c	FBgn0000022	307	311
 883	9649507	scute	FBgn0004170	390	395
-883	9649507	protein	FBgn0261617	396	403
 883	9649507	for	FBgn0000721	452	455
 883	9649507	as-c	FBgn0000022	506	510
 883	9649507	for	FBgn0000721	639	642
@@ -21277,7 +21258,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 887	9716538	leg	FBgn0003300	481	484
 887	9716538	eye	FBgn0005558	538	541
 887	9716538	disc	FBgn0000459	542	546
-887	9716538	stripe	FBgn0003499	596	602
 887	9716538	atonal	FBgn0010433	647	653
 887	9716538	eye	FBgn0005558	812	815
 887	9716538	r8	FBgn0019940	899	901
@@ -21621,4 +21601,3 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 899	9892673	twin of eyeless	FBgn0019650	1062	1077
 
 --------------------
-

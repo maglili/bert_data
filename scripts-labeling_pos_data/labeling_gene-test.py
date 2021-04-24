@@ -64,6 +64,19 @@ with open('labeling.tsv', 'w', newline='', encoding='utf-8') as csvfile:
             save_range.extend(pos)
         save_range.sort()
 
+        # remove wrong alias that not complete word
+        # e.g  show ->　how,  13.5 -> 5
+        remove_list = []
+        for (start, end) in save_range:
+            if (text[start-1].isalpha() or text[end].isnumeric()) or (text[end].isalpha() or text[end].isnumeric()):
+                remove_list.append((start, end))
+            if (text[start:end].isnumeric()) and (start-2 >= 0) and (end+1 < len(text)):
+                if ((not text[start-1].isalpha()) and (text[start-2].isnumeric())) or ((not text[end].isalpha()) and (text[end+1].isnumeric())):
+                    remove_list.append((start, end))
+        remove_list = list(set(remove_list))
+        for pos in remove_list:
+            save_range.remove(pos)
+
         # remove redundant alias (alias that smaller than another one)
         # e.g enhancer of split mdelta -> enhancer of split
         remove_list = []
@@ -73,23 +86,6 @@ with open('labeling.tsv', 'w', newline='', encoding='utf-8') as csvfile:
                     remove_list.append(save_range[i])
                 if (save_range[j][0] >= save_range[i][0]) and (save_range[j][1] <= save_range[i][1]):
                     remove_list.append(save_range[j])
-        remove_list = list(set(remove_list))
-        for pos in remove_list:
-            save_range.remove(pos)
-
-        # remove wrong alias that not complete word
-        # e.g  show ->　how,  13.5 -> 5
-        remove_list = []
-        for (start, end) in save_range:
-            if (text[start-1].isalpha()) or (text[end].isalpha()):
-                remove_list.append((start, end))
-            if (text[start:end].isnumeric()) and (start-2 >= 0) and (end+1 < len(text)):
-                # print('start:',start)
-                # print('end:',end)
-                # print('text:',len(text))
-                # print('-'*10)
-                if ((not text[start-1].isalpha()) and (text[start-2].isnumeric())) or ((not text[end].isalpha()) and (text[end+1].isnumeric())):
-                    remove_list.append((start, end))
         remove_list = list(set(remove_list))
         for pos in remove_list:
             save_range.remove(pos)

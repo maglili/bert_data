@@ -4,6 +4,5 @@ htmls/
 neg_all-combine.csv
 neg_all-final.csv
 backup/
-*.pickle
 *.pkl
 *.txt

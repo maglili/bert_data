@@ -47,7 +47,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 2	10101114	protein	FBgn0261617	344	351
 2	10101114	string	FBgn0003525	376	382
 2	10101114	6	FBgn0085387	392	393
-2	10101114	6	FBgn0085387	403	404
 2	10101114	for	FBgn0000721	408	411
 2	10101114	string	FBgn0003525	448	454
 2	10101114	string	FBgn0003525	556	562
@@ -167,7 +166,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 6	10226011	knirps	FBgn0001320	940	946
 6	10226011	6	FBgn0085387	985	986
 6	10226011	by	FBgn0000244	1023	1025
-6	10226011	6	FBgn0085387	1123	1124
 6	10226011	dev	FBgn0285896	1126	1129
 6	10226011	at	FBgn0010433	1155	1157
 6	10226011	for	FBgn0000721	1229	1232
@@ -10435,7 +10433,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 433	20671200	for	FBgn0000721	1089	1092
 433	20671200	out	FBgn0259834	1139	1142
 433	20671200	29	FBgn0003559	1150	1152
-433	20671200	29	FBgn0003559	1315	1317
 433	20671200	lola	FBgn0283521	1346	1350
 433	20671200	as	FBgn0061469	1356	1358
 433	20671200	lola	FBgn0283521	1414	1418
@@ -17544,10 +17541,8 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 736	31444217	for	FBgn0000721	138	141
 736	31444217	for	FBgn0000721	176	179
 736	31444217	at	FBgn0010433	398	400
-736	31444217	6	FBgn0085387	407	408
 736	31444217	at	FBgn0010433	458	460
 736	31444217	novel	FBgn0035490	495	500
-736	31444217	13	FBgn0263111	584	586
 736	31444217	by	FBgn0000244	644	646
 736	31444217	hindsight	FBgn0003053	688	697
 736	31444217	hnt	FBgn0003053	699	702
@@ -18159,7 +18154,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 761	7607084	how	FBgn0264491	101	104
 761	7607084	for	FBgn0000721	264	267
 761	7607084	6	FBgn0085387	302	303
-761	7607084	6	FBgn0085387	320	321
 761	7607084	stripe	FBgn0003499	380	386
 761	7607084	stripe	FBgn0003499	481	487
 761	7607084	by	FBgn0000244	515	517
@@ -18818,22 +18812,18 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 the eip28/29 gene of drosophila is an example of a tissue- and stage-specific ecdysone-responsive gene. its diverse patterns of expression during the third larval instar and a synopsis of those patterns in terms of expression groups have been reported previously. here we have studied the expression (in transgenic flies) of reporter genes controlled by eip28/29-derived flanking dna. during the middle and late third instar, most tissues exhibit normal expression patterns when controlled by one of two classes of regulatory sequences. class a sequences include only 657 np of 5' flanking dna from eip28/29. class b sequences include an extended 3' flanking region and a minimal (< or = 93 np) 5' flanking region. the class b sequences include all those elements known to be important for ecdysone induction in cultured cells. they are sufficient to direct the normal premetamorphic induction of eip28/29 in the lymph glands, hemocytes, proventriculus, and malpighian tubules. this is consistent with our suggestion that kc cells are derived from embryonic hematopoietic cells. it is remarkable that the epidermis requires only class a sequences. these are sufficient to up-regulate expression at mid-instar and to down-regulate expression at metamorphosis. it follows that the epidermis uses ecres distinct from those that function in kc cells. it is possible that the upstream ecre, which is nearly silent in kc cells, is active in the epidermis.
 index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_label
 787	7923935	eip28	FBgn0000565	4	9
-787	7923935	29	FBgn0003559	10	12
 787	7923935	ecdysone	FBgn0000543	78	86
 787	7923935	by	FBgn0000244	351	353
 787	7923935	eip28	FBgn0000565	354	359
-787	7923935	29	FBgn0003559	360	362
 787	7923935	dna	FBgn0015664	380	383
 787	7923935	by	FBgn0000244	490	492
 787	7923935	np	FBgn0265011	572	574
 787	7923935	dna	FBgn0015664	590	593
 787	7923935	eip28	FBgn0000565	599	604
-787	7923935	29	FBgn0003559	605	607
 787	7923935	np	FBgn0265011	691	693
 787	7923935	for	FBgn0000721	786	789
 787	7923935	ecdysone	FBgn0000543	790	798
 787	7923935	eip28	FBgn0000565	897	902
-787	7923935	29	FBgn0003559	903	905
 787	7923935	at	FBgn0010433	1195	1197
 787	7923935	at	FBgn0010433	1241	1243
 

@@ -1,14 +1,30 @@
 import pickle
+import pandas as pd
 import re
 
-with open('../scripts_find_targets_alias/pickles/reverse_data_dict_biogrid.pickle', 'rb') as handle:
+# reverse_data_dict_biogrid: combining flybase, bgee, biogrid aliases
+with open("../gene_alias/pickles/reverse_data_dict_biogrid.pickle", "rb") as handle:
     reverse_data_dict_biogrid = pickle.load(handle)
 
-# count = 0
-# for key, value in reverse_data_dict_biogrid.items():
-#     print(key)
-#     count += 1
-#     if count == 100:
-#         break
+# load positive data
+df = pd.read_csv(
+    "../csv_data/output-pos-remove_no_abst.csv",
+    header=None,
+    encoding="utf-8",
+    dtype=str,
+)
+df = df[[0, 2]]
 
-print('cat' in reverse_data_dict_biogrid)
+# find specific abstract
+idx = 787
+idx -= 1
+start = 903
+end = 905
+pmid, text = df.iloc[idx]
+text = " ".join(text.split())
+
+print("\npmid:", pmid)
+print("\nabst:\n", text)
+print()
+print("text:", text[start - 5 : end + 5])
+print("text:", text[start:end])

@@ -16,15 +16,15 @@ df = pd.read_csv(
 df = df[[0, 2]]
 
 # find specific abstract
-idx = 787
+idx = 91
 idx -= 1
-start = 903
-end = 905
+start = 723
+end = 725
 pmid, text = df.iloc[idx]
 text = " ".join(text.split())
 
 print("\npmid:", pmid)
-print("\nabst:\n", text)
+# print("\nabst:\n", text)
 print()
 print("text:", text[start - 5 : end + 5])
 print("text:", text[start:end])

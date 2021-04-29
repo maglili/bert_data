@@ -7,6 +7,8 @@ import csv
 import re
 from tools import rm_sign
 from tqdm import tqdm
+from os import listdir
+from os.path import isfile, join
 
 # reverse_data_dict_biogrid: combining flybase, bgee, biogrid aliases
 with open("../gene_alias/pickles/reverse_data_dict_biogrid.pickle", "rb") as handle:
@@ -18,8 +20,21 @@ df = pd.read_csv(
 )
 df = df[[0, 2]]
 
+# change filename if exist
+onlyfiles = [f for f in listdir("./") if isfile(join("./", f))]
+print(onlyfiles)
+count = 0
+while True:
+    filename = "labeling-" + str(count) + ".tsv"
+    if filename in onlyfiles:
+        count += 1
+        print(filename, "existed")
+    else:
+        print("filename:", filename)
+        break
+
 # writing the output file
-with open("labeling.tsv", "w", newline="", encoding="utf-8") as csvfile:
+with open(filename, "w", newline="", encoding="utf-8") as csvfile:
     writer = csv.writer(csvfile, delimiter="\t")
 
     count = 0  # counter
@@ -78,11 +93,13 @@ with open("labeling.tsv", "w", newline="", encoding="utf-8") as csvfile:
 
         # remove wrong alias that not complete word
         # e.g  show ->　how
-        # e.g. 13.5 -> 5, 5.36
+        # e.g. 13.5 -> 5, 5.36 -> 5, -68 -> 68
+        # e.g. so10 -> so
+        # [note] "6," or "6." will be ignore.
         remove_list = []
         for (start, end) in save_range:
 
-            if (text[start - 1].isalpha() or text[end].isnumeric()) or (
+            if (text[start - 1].isalpha() or text[start - 1].isnumeric()) or (
                 text[end].isalpha() or text[end].isnumeric()
             ):  # word
                 remove_list.append((start, end))
@@ -92,8 +109,8 @@ with open("labeling.tsv", "w", newline="", encoding="utf-8") as csvfile:
                 and (start - 2 >= 0)
                 and (end + 1 < len(text))
             ):  # number
-                if ((text[start - 1] != " ") and (text[start - 2].isnumeric())) or (
-                    (text[end] != " ") and (text[end + 1].isnumeric())
+                if (text[start - 1] != " ") or (
+                    text[end] != " " and (text[end] != "." and text[end] != ",")
                 ):
                     remove_list.append((start, end))
 

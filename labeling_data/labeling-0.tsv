@@ -148,7 +148,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 6	10226011	novel	FBgn0035490	301	306
 6	10226011	by	FBgn0000244	376	378
 6	10226011	for	FBgn0000721	431	434
-6	10226011	6	FBgn0085387	531	532
 6	10226011	stripe	FBgn0003499	586	592
 6	10226011	by	FBgn0000244	620	622
 6	10226011	by	FBgn0000244	647	649
@@ -801,7 +800,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 30	10644409	protein	FBgn0261617	205	212
 30	10644409	ubx	FBgn0003944	281	284
 30	10644409	protein	FBgn0261617	294	301
-30	10644409	6	FBgn0085387	317	318
 30	10644409	dna	FBgn0015664	340	343
 30	10644409	abd-a	FBgn0000014	433	438
 30	10644409	protein	FBgn0261617	449	456
@@ -2320,7 +2318,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 
 the insect fat body is a dynamic tissue involved in maintaining homeostasis. it functions not only in energy storage and intermediary metabolism but also in detoxification, communication and the immune response. some of these functions are confined to distinct groups of fat body cells. in drosophila melanogaster, discrete precursor-cell clusters populate the fat body [hoshizaki, d.k., blackburn, t., price, c., ghosh, m., miles, k., ragucci, m. and sweis, r. (1994) embryonic fat-cell lineage in drosophila melanogaster. development 120: 2489-2499; hoshizaki, d.k., lunz, r., ghosh, m. and johnson, w. (1995) identification of fat-cell enhancer activity in drosophila melanogaster using p-element enhancer traps. genome 38: 497-506; riechmann, v., rehorn, k.p., reuter, r. and leptin, m. (1998) the genetic control of the distinction between fat body and gonadal mesoderm in drosophila. development 125: 713-723]. whether these clusters populate defined morphological regions or whether they represent the precursors to functionally similar groups of fat-body cells has not been formally demonstrated. we have identified a 2.1 kb enhancer region from serpent (srp), a gata transcription factor gene that is sufficient to induce fat-cell formation. this enhancer region drives expression in specific groups of precursor-cell clusters, which we show give rise to defined regions of the mature embryonic fat body. we present evidence that srp expression in different precursor fat cells is controlled by independent cis-acting regulatory regions, and we have tested the role of trans-acting factors in the specification of some of these cells. we suggest that the different positional cues regulating srp expression, and therefore general fat-cell specification, might also be involved in the functional specialization of fat cells. this may be a common mechanism in insects to explain the origin of biochemically distinct regions of the larval/adult fat body.
 index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_label
-91	11841504	38	FBgn0016687	723	725
 91	11841504	gonadal	FBgn0001099	858	865
 91	11841504	similar	FBgn0266411	1036	1043
 91	11841504	2.1	FBgn0267727	1126	1129
@@ -2572,7 +2569,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 102	12117814	drumstick	FBgn0024244	129	138
 102	12117814	lines	FBgn0002552	149	154
 102	12117814	by	FBgn0000244	286	288
-102	12117814	10	FBgn0021742	414	416
 102	12117814	protein	FBgn0261617	434	441
 102	12117814	odd-skipped	FBgn0002985	466	477
 102	12117814	for	FBgn0000721	1063	1066
@@ -2620,7 +2616,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 104	12175493	by	FBgn0000244	628	630
 104	12175493	ecdysone	FBgn0000543	684	692
 104	12175493	at	FBgn0010433	862	864
-104	12175493	83	FBgn0001233	882	884
 104	12175493	ddc	FBgn0000422	1080	1083
 104	12175493	for	FBgn0000721	1089	1092
 104	12175493	ecdysone receptor complex	FBgn0000546	1097	1122
@@ -5024,7 +5019,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 209	15793007	by	FBgn0000244	579	581
 209	15793007	bcd	FBgn0000166	620	623
 209	15793007	bcd	FBgn0000166	685	688
-209	15793007	21	FBgn0266848	708	710
 209	15793007	drive	FBgn0019972	722	727
 209	15793007	bcd	FBgn0000166	979	982
 209	15793007	for	FBgn0000721	1039	1042
@@ -5885,7 +5879,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 241	16343659	for	FBgn0000721	557	560
 241	16343659	orc2	FBgn0015270	624	628
 241	16343659	dre1	FBgn0024510	661	665
-241	16343659	21	FBgn0266848	675	677
 241	16343659	dre3	FBgn0250789	705	709
 241	16343659	dref	FBgn0015664	831	835
 241	16343659	dre1	FBgn0024510	844	848
@@ -6090,7 +6083,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 249	16595131	d-six4	FBgn0027364	658	664
 249	16595131	eyes absent	FBgn0000320	690	701
 249	16595131	at	FBgn0010433	767	769
-249	16595131	10	FBgn0021742	776	778
 249	16595131	d-six4	FBgn0027364	818	824
 249	16595131	tin	FBgn0004110	829	832
 249	16595131	dorsal	FBgn0260632	876	882
@@ -6100,7 +6092,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 249	16595131	at	FBgn0010433	989	991
 249	16595131	tin	FBgn0004110	1096	1099
 249	16595131	at	FBgn0010433	1101	1103
-249	16595131	9	FBgn0000015	1110	1111
 249	16595131	d-six4	FBgn0027364	1122	1128
 249	16595131	tin	FBgn0004110	1133	1136
 249	16595131	at	FBgn0010433	1174	1176
@@ -7204,7 +7195,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 294	17381512	was	FBgn0035120	1495	1498
 294	17381512	reduced	FBgn0283467	1499	1506
 294	17381512	by	FBgn0000244	1507	1509
-294	17381512	38	FBgn0016687	1510	1512
 294	17381512	dref	FBgn0015664	1517	1521
 294	17381512	dref	FBgn0015664	1588	1592
 294	17381512	rfc1	FBgn0004913	1618	1622
@@ -7581,8 +7571,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 310	17888422	rough eye	FBgn0003270	396	405
 310	17888422	was	FBgn0035120	432	435
 310	17888422	dre1	FBgn0024510	477	481
-310	17888422	48	FBgn0004359	503	505
-310	17888422	55	FBgn0263979	510	512
 310	17888422	dre3	FBgn0250789	519	523
 310	17888422	for	FBgn0000721	589	592
 310	17888422	knockdown	FBgn0261955	679	688
@@ -8667,9 +8655,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 356	1902784	ubx	FBgn0003944	505	508
 356	1902784	early	FBgn0002542	641	646
 356	1902784	ubx	FBgn0003944	698	701
-356	1902784	6	FBgn0085387	732	733
-356	1902784	8	FBgn0262432	735	736
-356	1902784	10	FBgn0021742	738	740
 356	1902784	12	FBgn0015245	746	748
 356	1902784	ubx	FBgn0003944	832	835
 356	1902784	hunchback	FBgn0001180	863	872
@@ -8695,11 +8680,9 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 357	1902805	stripe	FBgn0003499	203	209
 357	1902805	dna	FBgn0015664	256	259
 357	1902805	for	FBgn0000721	387	390
-357	1902805	6	FBgn0085387	430	431
 357	1902805	stripe	FBgn0003499	477	483
 357	1902805	stripe	FBgn0003499	503	509
 357	1902805	stripe	FBgn0003499	561	567
-357	1902805	6	FBgn0085387	580	581
 357	1902805	by	FBgn0000244	603	605
 357	1902805	stripe	FBgn0003499	932	938
 357	1902805	stripe	FBgn0003499	1011	1017
@@ -8782,7 +8765,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 360	1903838	sgs-7	FBgn0003377	452	457
 360	1903838	for	FBgn0000721	474	477
 360	1903838	glue	FBgn0003373	589	593
-360	1903838	48	FBgn0004359	675	677
 360	1903838	sgs-7	FBgn0003377	693	698
 360	1903838	sgs-3	FBgn0003373	797	802
 360	1903838	glue	FBgn0003373	861	865
@@ -9391,7 +9373,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 388	19755581	at	FBgn0010433	43	45
 388	19755581	for	FBgn0000721	326	329
 388	19755581	dorsal	FBgn0260632	550	556
-388	19755581	84	FBgn0003459	674	676
 388	19755581	dorsal	FBgn0260632	727	733
 388	19755581	eye	FBgn0005558	938	941
 388	19755581	by	FBgn0000244	954	956
@@ -9455,11 +9436,8 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 391	1979031	abx	FBgn0003944	642	645
 391	1979031	abx	FBgn0003944	793	796
 391	1979031	ubx	FBgn0003944	822	825
-391	1979031	6	FBgn0085387	922	923
 391	1979031	8	FBgn0262432	930	931
 391	1979031	similar	FBgn0266411	940	947
-391	1979031	6	FBgn0085387	1029	1030
-391	1979031	8	FBgn0262432	1037	1038
 391	1979031	early	FBgn0002542	1178	1183
 391	1979031	for	FBgn0000721	1243	1246
 
@@ -10535,7 +10513,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 437	20797865	snail	FBgn0003448	1181	1186
 437	20797865	shadow	FBgn0003312	1244	1250
 437	20797865	novel	FBgn0035490	1273	1278
-437	20797865	6	FBgn0085387	1429	1430
 
 --------------------
 
@@ -11087,7 +11064,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 462	21383317	twist	FBgn0003900	520	525
 462	21383317	crm	FBgn0000376	568	571
 462	21383317	twist	FBgn0003900	620	625
-462	21383317	31	FBgn0016976	706	708
 462	21383317	twist	FBgn0003900	753	758
 462	21383317	for	FBgn0000721	759	762
 462	21383317	twist	FBgn0003900	800	805
@@ -12247,7 +12223,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 511	22537497	link	FBgn0033855	1245	1249
 511	22537497	midline	FBgn0261963	1298	1305
 511	22537497	was	FBgn0035120	1317	1320
-511	22537497	13	FBgn0263111	1450	1452
 511	22537497	link	FBgn0033855	1553	1557
 511	22537497	multiple	FBgn0051719	1604	1612
 511	22537497	6	FBgn0085387	1646	1647
@@ -13395,7 +13370,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 558	24462039	how	FBgn0264491	0	3
 558	24462039	by	FBgn0000244	189	191
 558	24462039	for	FBgn0000721	403	406
-558	24462039	16	FBgn0266848	521	523
 558	24462039	r7	FBgn0033672	524	526
 558	24462039	r7	FBgn0033672	549	551
 558	24462039	activin	FBgn0024913	568	575
@@ -14036,13 +14010,11 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 584	2501151	at	FBgn0010433	104	106
 584	2501151	for	FBgn0000721	223	226
 584	2501151	e74	FBgn0000567	236	239
-584	2501151	83	FBgn0001233	280	282
 584	2501151	had	FBgn0286508	283	286
 584	2501151	had	FBgn0286508	459	462
 584	2501151	no	FBgn0261808	463	465
 584	2501151	start	FBgn0035028	761	766
 584	2501151	at	FBgn0010433	940	942
-584	2501151	83	FBgn0001233	1009	1011
 584	2501151	for	FBgn0000721	1040	1043
 584	2501151	e74	FBgn0000567	1157	1160
 584	2501151	zeste	FBgn0004050	1171	1176
@@ -14144,9 +14116,7 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 589	2511050	sry delta	FBgn0003512	375	384
 589	2511050	sry delta	FBgn0003512	430	439
 589	2511050	by	FBgn0000244	458	460
-589	2511050	10	FBgn0021742	521	523
 589	2511050	protein	FBgn0261617	542	549
-589	2511050	12	FBgn0015245	590	592
 589	2511050	protein	FBgn0261617	619	626
 589	2511050	early	FBgn0002542	667	672
 589	2511050	at	FBgn0010433	729	731
@@ -15952,7 +15922,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 
 gastrulation of the drosophila embryo is one of the most intensively studied morphogenetic processes in animal development [1-4]. particular efforts have focused on the formation of the ventral furrow, whereby ∼1,000 presumptive mesoderm cells exhibit coordinated apical constrictions that mediate invagination [5, 6]. apical constriction depends on a rho gtpase signaling pathway (t48/fog) that is deployed by the developmental regulatory genes twist and snail [7-10]. it is thought that coordinate mesoderm constriction depends on high levels of myosin along the ventral midline, although the basis for this localization is uncertain. here, we employ newly developed quantitative imaging methods to visualize the transcriptional dynamics of two key components of the rho signaling pathway in living embryos, t48 and fog. both genes display dorsoventral (dv) gradients of expression due to differential timing of transcription activation. transcription begins as a narrow stripe of two or three cells along the ventral midline, followed by progressive expansions into more lateral regions. quantitative image analyses suggest that these temporal gradients produce differential spatial accumulations of t48 and fog mrnas along the dv axis, similar to the distribution of myosin activity. we therefore propose that the transcriptional dynamics of t48 and fog expression foreshadow the coordinated invagination of the mesoderm at the onset of gastrulation.
 index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_label
-665	28089518	6	FBgn0085387	315	316
 665	28089518	rho gtpase	FBgn0014020	352	362
 665	28089518	t48	FBgn0004359	382	385
 665	28089518	by	FBgn0000244	408	410
@@ -16619,7 +16588,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 693	29539636	egg	FBgn0086908	702	705
 693	29539636	egg	FBgn0086908	827	830
 693	29539636	egg	FBgn0086908	996	999
-693	29539636	13	FBgn0263111	1028	1030
 693	29539636	by	FBgn0000244	1465	1467
 693	29539636	shotgun	FBgn0003391	2063	2070
 
@@ -16723,7 +16691,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 697	2975615	rh2	FBgn0003248	1077	1080
 697	2975615	dna	FBgn0015664	1150	1153
 697	2975615	rh2	FBgn0003248	1170	1173
-697	2975615	32	FBgn0016976	1197	1199
 697	2975615	ninae	FBgn0002940	1333	1338
 697	2975615	ninac	FBgn0002938	1343	1348
 697	2975615	by	FBgn0000244	1351	1353
@@ -16926,7 +16893,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 707	3011424	dna	FBgn0015664	91	94
 707	3011424	for	FBgn0000721	155	158
 707	3011424	hsp23	FBgn0001224	179	184
-707	3011424	26	FBgn0001225	189	191
 707	3011424	for	FBgn0000721	286	289
 707	3011424	hsp23	FBgn0001224	290	295
 707	3011424	was	FBgn0035120	442	445
@@ -18334,7 +18300,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 767	7700229	sry beta	FBgn0003511	1024	1032
 767	7700229	sry beta	FBgn0003511	1128	1136
 767	7700229	jan a	FBgn0001280	1221	1226
-767	7700229	151	FBgn0261675	1279	1282
 767	7700229	jan a	FBgn0001280	1384	1389
 767	7700229	sry beta	FBgn0003511	1394	1402
 767	7700229	by	FBgn0000244	1443	1445
@@ -18354,7 +18319,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 768	7711745	mst57da	FBgn0011668	582	589
 768	7711745	mst57db	FBgn0011669	594	601
 768	7711745	for	FBgn0000721	772	775
-768	7711745	55	FBgn0263979	863	865
 768	7711745	mst57da	FBgn0011668	915	922
 768	7711745	mst57db	FBgn0011669	927	934
 768	7711745	mst57db	FBgn0011669	1065	1072
@@ -18470,7 +18434,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 773	7791801	narrow	FBgn0283508	603	609
 773	7791801	multiple	FBgn0051719	654	662
 773	7791801	for	FBgn0000721	836	839
-773	7791801	6	FBgn0085387	892	893
 773	7791801	dorsal	FBgn0260632	1102	1108
 773	7791801	by	FBgn0000244	1286	1288
 773	7791801	by	FBgn0000244	1351	1353
@@ -18631,7 +18594,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 780	7873402	similar	FBgn0266411	865	872
 780	7873402	prd	FBgn0003145	911	914
 780	7873402	protein	FBgn0261617	915	922
-780	7873402	10	FBgn0021742	937	939
 780	7873402	activator	FBgn0265784	966	975
 780	7873402	prd	FBgn0003145	1049	1052
 780	7873402	as	FBgn0061469	1062	1064
@@ -18851,7 +18813,6 @@ the transcription of the drosophila melanogaster fbp1 gene is induced by the ste
 index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_label
 789	8007953	fbp1	FBgn0000639	49	53
 789	8007953	by	FBgn0000244	70	72
-789	8007953	68	FBgn0001230	209	211
 789	8007953	start	FBgn0035028	257	262
 789	8007953	as	FBgn0061469	273	275
 789	8007953	ecdysone	FBgn0000543	279	287
@@ -18882,8 +18843,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 790	8065369	dna	FBgn0015664	12	15
 790	8065369	for	FBgn0000721	43	46
 790	8065369	1t	FBgn0003884	127	129
-790	8065369	29	FBgn0003559	218	220
-790	8065369	68	FBgn0001230	254	256
 790	8065369	1t	FBgn0003884	409	411
 790	8065369	at	FBgn0010433	448	450
 790	8065369	at	FBgn0010433	521	523
@@ -19957,7 +19916,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 837	8662923	dna	FBgn0015664	593	596
 837	8662923	proliferating cell nuclear antigen	FBgn0005655	643	677
 837	8662923	at	FBgn0010433	709	711
-837	8662923	10	FBgn0021742	784	786
 837	8662923	dre-binding factor	FBgn0015664	847	865
 837	8662923	dref	FBgn0015664	867	871
 837	8662923	dref	FBgn0015664	918	922
@@ -20889,7 +20847,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 873	9431808	by	FBgn0000244	487	489
 873	9431808	mst84db	FBgn0004173	533	540
 873	9431808	by	FBgn0000244	566	568
-873	9431808	275	FBgn0262453	793	796
 873	9431808	for	FBgn0000721	924	927
 873	9431808	by	FBgn0000244	990	992
 873	9431808	did	FBgn0086371	1055	1058
@@ -20913,7 +20870,6 @@ index	article_pmid	entity_text	entity_fbid	start_position	end_position	manual_la
 874	9431812	hh	FBgn0004644	412	414
 874	9431812	ci	FBgn0004859	418	420
 874	9431812	wg	FBgn0284084	431	433
-874	9431812	10	FBgn0021742	510	512
 874	9431812	wingless	FBgn0284084	546	554
 874	9431812	ci	FBgn0004859	577	579
 874	9431812	ci	FBgn0004859	602	604
